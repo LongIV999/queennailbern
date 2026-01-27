@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <!-- Global site tag (đặt trong <head>) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17650216392"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17650216392');
+</script>
+
+<!-- Event snippet: bắn khi tải trang chủ -->
+<script>
+  // chỉ bắn ở trang chủ
+  if (location.hostname === 'queennailsbern.com' && location.pathname === '/') {
+    gtag('event', 'conversion', {
+      'send_to': 'AW-17650216392/YOUR_PAGEVIEW_LABEL' // ← thay YOUR_PAGEVIEW_LABEL bằng label thật
+    });
+  }
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Đặt lịch | Book Appointment | Termin buchen</title>
+  <meta name="description" content="Queen Nails & Lashes Bern - Book your appointment now for professional nails and lashes. 10% discount on your first visit!">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Queen Nails & Lashes Bern - Book Appointment">
+  <meta property="og:description" content="Professional Manicure, Pedicure & Lash Extensions in Bern. Book now and get 10% off!">
+  <meta property="og:image" content="https://res.cloudinary.com/dutzxseaw/image/upload/v1760676605/Queen-03_mxp5vv.png">
+  <meta property="og:url" content="https://queennailsbern.com/booking-conversion.html">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17650216392"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'AW-17650216392');
+  </script>
+
+  <style>
+    :root { --brand:#ff1493; }
+    body {
+      font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+      text-align: center;
+      background: #fffafc;
+      color: #333;
+      padding: 48px 16px 80px;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; }
+    h1 { color: var(--brand); font-size: 28px; margin: 0 0 8px; }
+    p.lead { font-size: 18px; margin: 0 0 28px; }
+    a.btn {
+      display: inline-block;
+      background: var(--brand);
+      color: #fff;
+      text-decoration: none;
+      padding: 12px 26px;
+      border-radius: 25px;
+      font-size: 18px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(255, 20, 147, 0.3);
+    }
+    a.btn:hover { background: #ff69b4; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(255, 20, 147, 0.4); filter: none; }
+    a.btn:active { transform: translateY(1px); }
+    .lang { display:flex; gap:8px; justify-content:center; margin-bottom:18px; flex-wrap:wrap;}
+    .lang button {
+      border:1px solid #ddd; background:#fff; padding:6px 10px; border-radius:8px; cursor:pointer;
+    }
+    .lang button.active { border-color: var(--brand); color: var(--brand); font-weight:600;}
+    footer { margin-top:40px; font-size:13px; color:#666; }
+    .note { font-size:14px; color:#666; margin-top: 16px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="lang">
+      <button data-lang="vi">Tiếng Việt</button>
+      <button data-lang="en">English</button>
+      <button data-lang="de">Deutsch</button>
+    </div>
+
+    <h1 id="title">🎉 Đặt lịch ngay tại Queen Nails & Lashes!</h1>
+    <p id="desc" class="lead">Nhấn nút bên dưới để hoàn tất và ghi nhận chuyển đổi đặt lịch hẹn.</p>
+
+    <a id="cta" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" 
+       class="btn js-booking" 
+       data-conversion-url="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/">
+       Đặt lịch ngay
+    </a>
+
+    <p class="note" id="note">Bạn sẽ được chuyển sang trang đặt lịch Treatwell sau khi hệ thống ghi nhận.</p>
+
+    <footer>
+      <div id="footer-line">📍 Queen Nails & Lashes · Kramgasse 37, 3011 Bern · +41 79 805 00 68</div>
+    </footer>
+  </div>
+
+  <script>
+    // ===== I18N =====
+    const I18N = {
+      vi: {
+        title: '🎉 Đặt lịch ngay tại Queen Nails & Lashes!',
+        desc: 'Nhấn nút bên dưới để hoàn tất và ghi nhận chuyển đổi đặt lịch hẹn.',
+        cta: 'Đặt lịch ngay',
+        note: 'Bạn sẽ được chuyển sang trang đặt lịch Treatwell sau khi hệ thống ghi nhận.',
+        footer: '📍 Queen Nails & Lashes · Kramgasse 37, 3011 Bern · +41 79 805 00 68'
+      },
+      en: {
+        title: '🎉 Book now at Queen Nails & Lashes!',
+        desc: 'Click the button below to complete your booking and record the conversion.',
+        cta: 'Book appointment',
+        note: 'You will be redirected to Treatwell once the conversion is recorded.',
+        footer: '📍 Queen Nails & Lashes · Kramgasse 37, 3011 Bern · +41 79 805 00 68'
+      },
+      de: {
+        title: '🎉 Jetzt Termin bei Queen Nails & Lashes buchen!',
+        desc: 'Klicken Sie unten, um die Buchung abzuschließen und die Conversion zu erfassen.',
+        cta: 'Termin buchen',
+        note: 'Sie werden zu Treatwell weitergeleitet, sobald die Conversion erfasst wurde.',
+        footer: '📍 Queen Nails & Lashes · Kramgasse 37, 3011 Bern · +41 79 805 00 68'
+      }
+    };
+
+    function getParam(name) {
+      const m = new URLSearchParams(location.search).get(name);
+      return m ? m.toLowerCase() : null;
+    }
+
+    function applyLang(lang) {
+      const dict = I18N[lang] || I18N.vi;
+      document.getElementById('title').textContent = dict.title;
+      document.getElementById('desc').textContent = dict.desc;
+      document.getElementById('cta').textContent = dict.cta;
+      document.getElementById('note').textContent = dict.note;
+      document.getElementById('footer-line').textContent = dict.footer;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang button').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === lang);
+      });
+      // store selection
+      try { localStorage.setItem('qn_lang', lang); } catch(e) {}
+    }
+
+    function initLang() {
+      const fromQS = getParam('lang');
+      const fromLS = (() => { try { return localStorage.getItem('qn_lang'); } catch(e){ return null; } })();
+      const lang = (fromQS || fromLS || (navigator.language || 'vi').slice(0,2)).replace(/[^a-z]/g,'');
+      applyLang(['vi','en','de'].includes(lang) ? lang : 'vi');
+    }
+
+    // ===== Conversion code (gtag direct) =====
+    function waitForGtag(cb){ if (typeof gtag === 'function') cb(); else setTimeout(()=>waitForGtag(cb), 150); }
+
+    function gtag_report_conversion(url) {
+      const callback = function(){ window.location.href = url; };
+      waitForGtag(function(){
+        gtag('event', 'conversion', {
+          'send_to': 'AW-17650216392/4KdbCJTDiq8bEMJibo-BB',
+          'event_callback': callback
+        });
+      });
+      setTimeout(callback, 1200); // fallback
+      return false;
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+      initLang();
+      document.querySelectorAll('.lang button').forEach(btn => {
+        btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+      });
+      document.querySelectorAll('.js-booking').forEach(el => {
+        el.addEventListener('click', function(e){
+          e.preventDefault();
+          const url = el.getAttribute('data-conversion-url') || el.href;
+          gtag_report_conversion(url);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

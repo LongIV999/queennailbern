@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" xmlns:with="http://www.thymeleaf.org/extras/with">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="_csrf" content="a1912880-e8f9-4860-9b02-dff9a2fbee7a" />
+	<!-- default header name is X-CSRF-TOKEN -->
+	<meta name="_csrf_header" content="X-CSRF-TOKEN" />
+	
+		<title>Tin nhắn - Tạp hóa MMO</title>
+		<meta property="og:title"  content="Tin nhắn - Tạp hóa MMO">
+		<meta property="og:description"  content="Tạp hóa MMO - Tin nhắn của bạn">
+		<meta name="description" content="Tạp hóa MMO - Tin nhắn của bạn">
+		
+		
+		<meta property="og:url" content="https://taphoammo.net/chat-box.html">
+		<meta property="og:image" content="https://taphoammo.net/images/logo/tap-hoa-mmo.png">
+		
+		
+		
+		
+		
+	
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" type="image/png" href="/images/logo/logo.jpg">
+	<link rel="icon" href="/images/icon/favicon.ico" type="image/ico">
+	<!-- fonts -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,400i,500,500i,700,700i">
+	<!-- css -->
+	<link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/vendor/owl-carousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="/vendor/photoswipe/photoswipe.css">
+	<link rel="stylesheet" href="/vendor/photoswipe/default-skin/default-skin.css">
+	<link rel="stylesheet" href="/vendor/select2/css/select2.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<!-- font - fontawesome -->
+	<link rel="stylesheet" href="/vendor/fontawesome/css/all.min.css">
+	<!-- font - stroyka -->
+	<link rel="stylesheet" href="/fonts/stroyka/stroyka.css">
+	<link rel="stylesheet" href="/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="/css/plugins/sweetalert.css">
+	<link rel="stylesheet" href="/css/plugins/toastr.min.css">
+	<link rel="stylesheet" href="/css/plugins/sceditor/themes/default.min.css" />
+	<script src="/css/plugins/sceditor/sceditor.min.js"></script>
+	
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css" rel="stylesheet" type="text/css" />
+	<script src="/js/jquery-3.5.1.js"></script>
+	<script src="/js/moment.min.js"></script>
+
+	
+	<style>
+		.container_fix {
+			width: 100%;
+			padding-right: 15px;
+			padding-left: 20px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		@media (max-width: 768px){
+			.container_fix{
+			    padding-right: 0px;
+				padding-left: 15px;
+			}
+		}
+		.holder {
+			z-index: 1000;
+			position: absolute;
+			left: 0px;
+			top: 0px;
+			bottom: 0px;
+			right: 0px;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+		}
+
+		.preloader {
+			/* size */
+			width: 100px;
+			height: 100px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			animation: rotatePreloader 2s infinite ease-in;
+		}
+
+		@keyframes rotatePreloader {
+			0% {
+				transform: translateX(-50%) translateY(-50%) rotateZ(0deg);
+			}
+			100% {
+				transform: translateX(-50%) translateY(-50%) rotateZ(-360deg);
+			}
+		}
+		.preloader div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+		}
+
+		.preloader div:before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 0%;
+			width: 10%;
+			height: 10%;
+			background-color: #21be73;
+			transform: translateX(-50%);
+			border-radius: 50%;
+		}
+
+		.preloader div:nth-child(1) {
+			transform: rotateZ(0deg);
+			animation: rotateCircle1 2s infinite linear;
+			z-index: 9;
+		}
+
+		@keyframes rotateCircle1 {
+			0% {
+				opacity: 0;
+			}
+			0% {
+				opacity: 1;
+				transform: rotateZ(36deg);
+			}
+			7% {
+				transform: rotateZ(0deg);
+			}
+			57% {
+				transform: rotateZ(0deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(2) {
+			transform: rotateZ(36deg);
+			animation: rotateCircle2 2s infinite linear;
+			z-index: 8;
+		}
+
+		@keyframes rotateCircle2 {
+			5% {
+				opacity: 0;
+			}
+			5.0001% {
+				opacity: 1;
+				transform: rotateZ(0deg);
+			}
+			12% {
+				transform: rotateZ(-36deg);
+			}
+			62% {
+				transform: rotateZ(-36deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(3) {
+			transform: rotateZ(72deg);
+			animation: rotateCircle3 2s infinite linear;
+			z-index: 7;
+		}
+
+		@keyframes rotateCircle3 {
+			10% {
+				opacity: 0;
+			}
+			10.0002% {
+				opacity: 1;
+				transform: rotateZ(-36deg);
+			}
+			17% {
+				transform: rotateZ(-72deg);
+			}
+			67% {
+				transform: rotateZ(-72deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(4) {
+			transform: rotateZ(108deg);
+			animation: rotateCircle4 2s infinite linear;
+			z-index: 6;
+		}
+
+		@keyframes rotateCircle4 {
+			15% {
+				opacity: 0;
+			}
+			15.0003% {
+				opacity: 1;
+				transform: rotateZ(-72deg);
+			}
+			22% {
+				transform: rotateZ(-108deg);
+			}
+			72% {
+				transform: rotateZ(-108deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(5) {
+			transform: rotateZ(144deg);
+			animation: rotateCircle5 2s infinite linear;
+			z-index: 5;
+		}
+
+		@keyframes rotateCircle5 {
+			20% {
+				opacity: 0;
+			}
+			20.0004% {
+				opacity: 1;
+				transform: rotateZ(-108deg);
+			}
+			27% {
+				transform: rotateZ(-144deg);
+			}
+			77% {
+				transform: rotateZ(-144deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(6) {
+			transform: rotateZ(180deg);
+			animation: rotateCircle6 2s infinite linear;
+			z-index: 4;
+		}
+
+		@keyframes rotateCircle6 {
+			25% {
+				opacity: 0;
+			}
+			25.0005% {
+				opacity: 1;
+				transform: rotateZ(-144deg);
+			}
+			32% {
+				transform: rotateZ(-180deg);
+			}
+			82% {
+				transform: rotateZ(-180deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(7) {
+			transform: rotateZ(216deg);
+			animation: rotateCircle7 2s infinite linear;
+			z-index: 3;
+		}
+
+		@keyframes rotateCircle7 {
+			30% {
+				opacity: 0;
+			}
+			30.0006% {
+				opacity: 1;
+				transform: rotateZ(-180deg);
+			}
+			37% {
+				transform: rotateZ(-216deg);
+			}
+			87% {
+				transform: rotateZ(-216deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(8) {
+			transform: rotateZ(252deg);
+			animation: rotateCircle8 2s infinite linear;
+			z-index: 2;
+		}
+
+		@keyframes rotateCircle8 {
+			35% {
+				opacity: 0;
+			}
+			35.0007% {
+				opacity: 1;
+				transform: rotateZ(-216deg);
+			}
+			42% {
+				transform: rotateZ(-252deg);
+			}
+			92% {
+				transform: rotateZ(-252deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(9) {
+			transform: rotateZ(288deg);
+			animation: rotateCircle9 2s infinite linear;
+			z-index: 1;
+		}
+
+		@keyframes rotateCircle9 {
+			40% {
+				opacity: 0;
+			}
+			40.0008% {
+				opacity: 1;
+				transform: rotateZ(-252deg);
+			}
+			47% {
+				transform: rotateZ(-288deg);
+			}
+			97% {
+				transform: rotateZ(-288deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+		.preloader div:nth-child(10) {
+			transform: rotateZ(324deg);
+			animation: rotateCircle10 2s infinite linear;
+			z-index: 0;
+		}
+
+		@keyframes rotateCircle10 {
+			45% {
+				opacity: 0;
+			}
+			45.0009% {
+				opacity: 1;
+				transform: rotateZ(-288deg);
+			}
+			52% {
+				transform: rotateZ(-324deg);
+			}
+			102% {
+				transform: rotateZ(-324deg);
+			}
+			100% {
+				transform: rotateZ(-324deg);
+				opacity: 1;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="site">
+		<!-- mobile site__header -->
+<header class="site__header d-lg-none">
+    <!-- data-sticky-mode - one of [pullToShow, alwaysOnTop] -->
+    <div class="mobile-header mobile-header--sticky" data-sticky-mode="pullToShow">
+        <div class="mobile-header__panel" style="background:#21bf73">
+            <div class="container_fix">
+                <div class="mobile-header__body">
+                    <button class="mobile-header__menu-button">
+                        <svg width="18px" height="14px">
+                            <use xlink:href="/images/svg/sprite.svg#menu-18x14"></use>
+                            <span id="noffall_2" class="indicator__value">0</span>
+                        </svg>
+                    </button>
+                    <a class="mobile-header__logo" href="/">
+                        <img src="/images/logo/logo1.png" alt="Logo" height="45">
+                    </a>
+
+                    <div class="mobile-header__indicators">
+                        
+                        
+                            <div class="indicator indicator--mobile-search indicator--mobile d-md">
+                                <a class="indicator__button" href="/chat-box.html">
+									<span class="indicator__area">
+										<i class="far fa-comment-dots" aria-hidden="true"></i>
+										<span id="noff_2" class="indicator__value">0</span>
+									</span>
+                                </a>
+                            </div>
+                            <div class="indicator indicator--mobile-search indicator--mobile d-md">
+<!--                                <a class="indicator__button" th:href="${'/thong-tin/'+ session.userLogin.username}">-->
+                                <a class="indicator__button" href="/thong-tin/london_sn8m54">
+									<span class="indicator__area">
+										<svg width="20px" height="20px">
+											<use xlink:href="/images/svg/sprite.svg#person-20"></use>
+										</svg>
+									</span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="site-header__topbar"
+                 style="background-color:white;border: none;">
+                <div class="topbar__container container_fix">
+                    <div class="topbar__row">
+                        <marquee style="color: #ff2626;">Tạp Hóa MMO - Mua bán sản phẩm số phục vụ Kiếm tiền online. Mọi giao dịch trên trang đều hoàn toàn tự động và được giữ tiền 3 ngày, thay thế cho hình thức trung gian, các bạn yên tâm giao dịch nhé. (2) Cảnh báo gian hàng không uy tín: Nếu chủ shop bán cho bạn sản phẩm không đúng định dạng: tài-khoản|mật-khẩu..., mà là 1 chuỗi không liên quan ở đầu, có nghĩa là hàng đó đang cố pass hệ thống check trùng của sàn, hãy nhanh chóng khiếu nại đơn hàng và báo cho bên mình nhé, vì sản phẩm bạn mua có thể đã từng bán cho người khác trên sàn.</marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- mobile site__header / end -->
+
+<!-- desktop site__header -->
+<header class="site__header d-lg-block d-none">
+    <div class="site-header">
+        <!-- .topbar -->
+        <div class="site-header__topbar topbar" style="background-color:white;">
+            <div class="topbar__container container_fix">
+                <div class="topbar__row">
+                    <div class="topbar__item topbar__item--link">
+                        <div class="topbar__item topbar__item--link">
+                            <a class="topbar-link">Hỗ trợ trực tuyến:</a>
+                        </div>
+                        <div class="topbar__item topbar__item--link">
+                            <a target="_blank" href="https://www.facebook.com/taphoammo11" class="topbar-link"
+                               style="color: #21bf73;">
+                                <i class="footer-contacts__icon fab fa-facebook"></i>Tạp hóa MMO
+                            </a>
+                        </div>
+                        <div class="topbar__item topbar__item--link">
+                            <a class="topbar-link">
+                                <i class="footer-contacts__icon far fa-envelope"></i><span class="__cf_email__" data-cfemail="b9caccc9c9d6cbcdf9cdd8c9d1d6d8d4d4d697d7dccd">[email&#160;protected]</span>
+                            </a>
+                        </div>
+                        <div class="topbar__item topbar__item--link">
+                            <a class="topbar-link"> <i class="footer-contacts__icon far fa-clock"></i>08:00am - 10:00pm</a>
+                        </div>
+                    </div>
+
+                    <div class="topbar__spring"></div>
+                    <div class="topbar__item">
+                        <div class="topbar-dropdown">
+                            <button class="topbar-dropdown__btn" type="button">
+                                <a style="color: #ff2626;"
+                                   href="/register.html">Đăng ký bán hàng</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="topbar__item">
+                        <div class="topbar-dropdown">
+                            <button class="topbar-dropdown__btn" type="button">
+                                <span>Ngôn ngữ:</span>
+                                <span class="topbar__item-value text-uppercase">vi</span>
+                                <svg width="7px" height="5px">
+                                    <use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-7x5"></use>
+                                </svg>
+                            </button>
+                            <div class="topbar-dropdown__body">
+                                <div class="menu menu--layout--topbar  menu--with-icons ">
+                                    <div class="menu__submenus-container"></div>
+                                    <ul class="menu__list">
+                                        <li class="menu__item">
+                                            <div class="menu__item-submenu-offset"></div>
+                                            <a class="menu__item-link" href="?lang=en">
+                                                <div class="menu__item-icon"><img src="/images/icon/en.png"
+                                                                                  alt=""></div>
+                                                English
+                                            </a>
+                                        </li>
+                                        <li class="menu__item">
+                                            <div class="menu__item-submenu-offset"></div>
+                                            <a class="menu__item-link" href="?lang=vi">
+                                                <div class="menu__item-icon"><img src="/images/icon/vn.png"
+                                                                                  alt=""></div>
+                                                Tiếng Việt
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- .topbar / end -->
+
+        <div class="site-header__nav-panel">
+            <div class="nav-panel nav-panel--sticky" data-sticky-mode="pullToShow" style="background:#21bf73;">
+                <div class="nav-panel__container container_fix">
+                    <div class="nav-panel__row">
+                        <div class="nav-panel__logo">
+                            <a href="/">
+                                <img src="/images/logo/logo1.png" alt="Logo" height="45">
+                            </a>
+                        </div>
+                        <!-- .nav-links -->
+                        <div class="nav-panel__nav-links nav-links">
+                            <ul class="nav-links__list">
+
+                                <li class="nav-links__item  nav-links__item--has-submenu ">
+                                    <a class="nav-links__item-link">
+                                        <div style="cursor: pointer;" class="nav-links__item-body">
+                                            <div>Sản phẩm</div>
+                                            <svg class="nav-links__item-arrow" width="9px" height="6px">
+                                                <use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-9x6"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <div
+                                            class="nav-links__submenu nav-links__submenu--type--megamenu nav-links__submenu--size--x1">
+                                        <!-- .megamenu -->
+                                        <div class="megamenu ">
+                                            <div class="megamenu__body">
+                                                <div class="row">
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/email">Email</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/phan-mem">Phần mềm</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/tai-khoan">Tài khoản</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/danh-muc-khac">Khác</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- .megamenu / end -->
+                                    </div>
+                                </li>
+                                <li class="nav-links__item  nav-links__item--has-submenu ">
+                                    <a class="nav-links__item-link">
+                                        <div style="cursor: pointer;" class="nav-links__item-body">
+                                            <div>Dịch vụ</div>
+                                            <svg class="nav-links__item-arrow" width="9px" height="6px">
+                                                <use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-9x6"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <div
+                                            class="nav-links__submenu nav-links__submenu--type--megamenu nav-links__submenu--size--x1">
+                                        <!-- .megamenu -->
+                                        <div class="megamenu ">
+                                            <div class="megamenu__body">
+                                                <div class="row">
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/dich-vu-tuong-tac">Tăng tương tác</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/dich-vu-phan-mem">Dịch vụ phần mềm</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/dich-vu-blockchain">Blockchain</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                        <div class="col-6">
+                                                            <ul class="megamenu__links megamenu__links--level--0">
+                                                                <li class="megamenu__item  megamenu__item--with-submenu">
+                                                                    <a href="/danh-muc/dich-vu-khac">Dịch vụ khác</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- .megamenu / end -->
+                                    </div>
+                                </li>
+                                <li class="nav-links__item">
+                                    <a class="nav-links__item-link" href="/support.html">
+                                        <div class="nav-links__item-body">Hỗ trợ</div>
+                                    </a>
+                                </li>
+                                <li class="nav-links__item">
+                                    <a style="position: relative;" class="nav-links__item-link" href="/post/list.html">
+                                        <div class="nav-links__item-body">Chia sẻ</div>
+                                        <span id="post_new" style="top:5px; right: 3px; padding-top: 3px; position: absolute;"></span>
+                                    </a>
+                                </li>
+
+<!--                                <li class="nav-links__item nav-links__item&#45;&#45;has-submenu">-->
+<!--                                    -->
+<!--                                    <div class="nav-links__submenu nav-links__submenu&#45;&#45;type&#45;&#45;menu">-->
+<!--                                        &lt;!&ndash; .menu &ndash;&gt;-->
+<!--                                        <div class="menu menu&#45;&#45;layout&#45;&#45;classic">-->
+<!--                                            <div class="menu__submenus-container"></div>-->
+<!--                                            <ul class="menu__list">-->
+<!--                                                <li class="menu__item">-->
+<!--                                                    &lt;!&ndash; This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. &ndash;&gt;-->
+<!--                                                    <div class="menu__item-submenu-offset"></div>-->
+<!--                                                    <a class="menu__item-link" th:href="@{/post/list.html}"-->
+<!--                                                       th:text="#{menu.post.list}"></a>-->
+<!--                                                </li>-->
+<!--                                                <li class="menu__item">-->
+<!--                                                    &lt;!&ndash; This is a synthetic element that allows to adjust the vertical offset of the submenu using CSS. &ndash;&gt;-->
+<!--                                                    <div class="menu__item-submenu-offset"></div>-->
+<!--                                                    <a class="menu__item-link" th:href="@{/post/post-add.html}"-->
+<!--                                                       th:text="#{menu.post.create}"></a>-->
+<!--                                                </li>-->
+<!--                                            </ul>-->
+<!--                                        </div>-->
+<!--                                        &lt;!&ndash; .menu / end &ndash;&gt;-->
+<!--                                    </div>-->
+<!--                                </li>-->
+                                <li class="nav-links__item  nav-links__item--has-submenu ">
+                                    <a class="nav-links__item-link">
+                                        <div style="cursor: pointer;" class="nav-links__item-body">
+                                            <div>Công cụ</div>
+                                            <svg class="nav-links__item-arrow" width="9px" height="6px">
+                                                <use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-9x6"></use>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                    <div
+                                            class="nav-links__submenu nav-links__submenu--type--megamenu nav-links__submenu--size--x1">
+                                        <!-- .megamenu -->
+                                        <div class="megamenu ">
+                                            <div class="megamenu__body">
+                                                <div class="row">
+                                                    <ul class="megamenu__links megamenu__links--level--0">
+                                                        <li class="megamenu__item  megamenu__item--with-submenu">
+                                                            <a class="nav-links__item-link" href="/2FA.html">
+                                                                <div class="nav-links__item-body">2FA</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                    <ul class="megamenu__links megamenu__links--level--0">
+                                                        <li class="megamenu__item  megamenu__item--with-submenu">
+                                                            <a class="nav-links__item-link"
+                                                               href="/check-live-facebook.html">
+                                                                <div class="nav-links__item-body">Check Live FB</div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- .megamenu / end -->
+                                    </div>
+                                </li>
+                                <li class="nav-links__item">
+                                    <a class="nav-links__item-link" href="/FAQs.html">
+                                        <div class="nav-links__item-body">FAQs</div>
+                                    </a>
+                                </li>
+                                
+                                    <li class="nav-links__item">
+                                        <a class="nav-links__item-link" href="/addFunds.html">
+                                            <div class="nav-links__item-body">Nạp tiền</div>
+                                        </a>
+                                    </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- .nav-links / end -->
+                        <div class="nav-panel__indicators">
+                            <div class="indicator">
+                                <a href="/addFunds.html" class="indicator__button">
+									<span class="indicator__area" id="homeUserBalance">Updating...
+									</span>
+                                </a>
+                                <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+                                	function addCommas(nStr)
+									{
+										nStr += '';
+										x = nStr.split('.');
+										x1 = x[0];
+										x2 = x.length > 1 ? '.' + x[1] : '';
+										var rgx = /(\d+)(\d{3})/;
+										while (rgx.test(x1)) {
+											x1 = x1.replace(rgx, '$1' + '.' + '$2');
+										}
+										return x1 + x2;
+									}
+									 $(document).ready(function () {
+								           $.ajax({
+							                url: "/api/getUserBalance",
+							                type: "post",
+							                dataType: "text",
+							                data: {},
+							                success: function (result) {
+							                    $('#homeUserBalance').text(addCommas(result) +" VND");
+							                },
+							                error: function () {
+
+							                }
+							            });
+							        });
+
+
+
+                                </script>
+                            </div>
+
+                            <div class="indicator">
+                                <a class="indicator__button" href="/chat-box.html">
+									<span class="indicator__area">
+										<i class="far fa-comment-dots"></i>
+										<span id="noff_1" class="indicator__value">0</span>
+									</span>
+                                </a>
+                            </div>
+
+                            <div class="indicator indicator--trigger--click">
+                                <a class="indicator__button">
+									<span class="indicator__area">
+										<svg width="20px" height="20px">
+											<use xlink:href="/images/svg/sprite.svg#person-20"></use>
+											<span id="noffall_1" class="indicator__value">0</span>
+										</svg>
+									</span>
+                                </a>
+                                <div class="indicator__dropdown">
+                                    <div class="account-menu">
+                                        
+
+                                        
+                                            <div class="account-menu__divider"></div>
+                                            <a href="/thong-tin/london_sn8m54"
+                                               class="account-menu__user">
+<!--                                            <a th:href="${session.userLogin != null ? '/thong-tin/'+ session.userLogin.username : '/login.html'}" class="account-menu__user">-->
+                                            <div class="account-menu__user-avatar">
+                                                	<img width="30px" height="30px" src="/images/avatars/user.svg">
+
+                                                </div>
+                                                <div class="account-menu__user-info">
+                                                    <div class="account-menu__user-name">london_sn8m54</div>
+                                                    <div class="account-menu__user-email"><span class="__cf_email__" data-cfemail="f39b9c929d94839b869c9d949f9c9d94c3c4b3949e929a9fdd909c9e">[email&#160;protected]</span></div>
+                                                </div>
+                                            </a>
+                                            <div class="account-menu__divider"></div>
+                                            <ul class="account-menu__links">
+                                                <li><a href="/thong-tin/london_sn8m54">Thông tin tài khoản</a></li>
+<!--                                                <a th:href="${session.userLogin != null ? '/thong-tin/'+session.userLogin.username : '/login.html'}" class="mobile-links__item-link" th:text="#{menu.profile}"></a>-->
+                                                <li><a href="/orders-buy.html">Đơn hàng đã mua</a></li>
+                                                <li><a href="/wishlist.html">Gian hàng yêu thích</a></li>
+                                                <li class="megamenu__item"><a href="/payments.html">Lịch sử thanh toán</a></li>
+                                                <li class="megamenu__item"><a href="/reseller.html">Reseller</a></li>
+
+                                                <li class="megamenu__item"><a href="/post/my-post.html">Quản lý nội dung</a></li>
+
+                                                <li><a href="/change-password.html">Đổi mật khẩu</a></li>
+                                            </ul>
+
+                                            
+                                            <div class="account-menu__divider"></div>
+                                            <ul class="account-menu__links">
+                                                <li><a href="/logout.html">Thoát</a></li>
+<!--                                                <li>-->
+<!--                                                    <a href="javascript:void(0)" onclick="logoutAllDevices()" th:text="#{login.logoutAll}">-->
+<!--                                                    </a>-->
+<!--                                                </li>-->
+                                            </ul>
+
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!--            <div class="modal fade" id="logoutAllModal" tabindex="-1" role="dialog" style="z-index: 9999;">-->
+<!--                <div class="modal-dialog" role="document" style="z-index: 10000;">-->
+<!--                    <div class="modal-content">-->
+<!--                        <div class="modal-header">-->
+<!--                            <h5 class="modal-title">Xác nhận đăng xuất</h5>-->
+<!--                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">-->
+<!--                                <span aria-hidden="true">&times;</span>-->
+<!--                            </button>-->
+<!--                        </div>-->
+<!--                        <div class="modal-body">-->
+<!--                            <p><strong>Bạn có chắc chắn muốn đăng xuất khỏi tất cả thiết bị?</strong></p>-->
+<!--                            <p><small class="text-muted">Bạn sẽ cần đăng nhập lại trên tất cả thiết bị.</small></p>-->
+<!--                        </div>-->
+<!--                        <div class="modal-footer">-->
+<!--                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>-->
+<!--                            <button type="button" class="btn btn-warning" id="confirmLogoutBtn">Đăng xuất tất cả</button>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!---->
+            <div class="site-header__topbar"
+                 style="background-color:white;border: none;">
+                <div class="topbar__container container_fix">
+                    <div class="topbar__row">
+                        <marquee style="color: #ff2626;">Tạp Hóa MMO - Mua bán sản phẩm số phục vụ Kiếm tiền online. Mọi giao dịch trên trang đều hoàn toàn tự động và được giữ tiền 3 ngày, thay thế cho hình thức trung gian, các bạn yên tâm giao dịch nhé. (2) Cảnh báo gian hàng không uy tín: Nếu chủ shop bán cho bạn sản phẩm không đúng định dạng: tài-khoản|mật-khẩu..., mà là 1 chuỗi không liên quan ở đầu, có nghĩa là hàng đó đang cố pass hệ thống check trùng của sàn, hãy nhanh chóng khiếu nại đơn hàng và báo cho bên mình nhé, vì sản phẩm bạn mua có thể đã từng bán cho người khác trên sàn.</marquee>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        function beforeLogin2() {
+            $('#formSignin').submit();
+            
+            // if (typeof grecaptcha !== 'undefined') {
+            //     var siteKey = "6LdlMFIcAAAAALDBHMRWYQXmpfU34Kgz11OmxTku";
+            //     grecaptcha.execute(siteKey, {action: "register"}).then(function (response) {
+            //         $('#response3').val(response);
+            //         $('#formSignin').submit();
+            //     });
+            // }
+        }
+    </script>
+    <script>
+        var out_session2 = 0;
+        var old_title = "";
+        var new_title = "";
+        var curentNewMes = 0;
+        var interval = null;
+        var new_mess = false;
+        var new_order = false;
+        var isVolumeOn = true;
+        var new_post_in_week = 0;
+        var volume = localStorage.getItem("volume");
+        var audio = new Audio('sound/notify.mp3');
+        if (volume != null && volume == "off") {
+            isVolumeOn = false;
+        }
+
+        function playNotifySound() {
+            if (isVolumeOn) {
+                audio.play();
+            }
+
+        }
+
+        
+
+        function checkFullNoff() {
+            if (out_session2 > 5) {
+                return;
+            }
+            $.ajax({
+                url: "/api/getNotify",
+                type: "post",
+                dataType: "text",
+                data: {},
+                success: function (result) {
+					console.log(result);
+                    out_session2 = 0;
+                    var rsArr = result.split("|");
+                    if (rsArr.length > 3) {
+                        var newOrder = rsArr[0];
+                        var newComment = rsArr[1];
+                        var newReseller = rsArr[2];
+                        var newTopup = rsArr[3];
+                        var newWating = rsArr[4];
+                        var newService = rsArr[5];
+                        var newMessage = rsArr[7];
+                        if (newMessage > 0) {
+	                        new_mess = true;
+	
+	                        if (newMessage > curentNewMes) {
+	                            playNotifySound();
+                        }
+
+                        curentNewMes = newMessage;
+	                    } else {
+	                        new_mess = false;
+	                    }
+	
+	                    if (newMessage > 99) {
+	                        newMessage = "99+";
+	                    }
+	                    $('#noff_1').text(newMessage);
+	                    $('#noff_2').text(newMessage);
+                        
+                        
+                        if (newTopup > 0) {
+                            setTimeout(function () {
+                                swal("Nạp tiền", "Bạn vừa nạp thành công " + newTopup.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " VND", "success");
+                            }, 100);
+                        }
+
+                        var sum = parseInt(newOrder) + parseInt(newComment) + parseInt(newReseller) + parseInt(newWating) + parseInt(newService);
+                        if (sum > 0) {
+                            new_order = true;
+                        } else {
+                            new_order = false;
+                        }
+
+                        if (sum > 99) {
+                            sum = "99+";
+                        }
+                        $('#noffall_1').text(sum);
+                        $('#noffall_2').text(sum);
+
+                        if (sum > 0) {
+                            $('#pc_kiosk').text('(' + sum + ')');
+                        } else {
+                            $('#pc_kiosk').text('');
+                        }
+
+                        if ($("#mb_sell_sum").length) {
+                            if (sum == '0') {
+                                $("#mb_sell_sum").text('');
+                            } else {
+                                $("#mb_sell_sum").text('(' + sum + ')');
+                            }
+                        }
+                        if ($("#mb_kiosk").length) {
+                            if (sum == 0) {
+                                $("#mb_kiosk").text('');
+                            } else {
+                                $("#mb_kiosk").text('(' + sum + ')');
+                            }
+                        }
+
+
+                    }
+
+                },
+                error: function () {
+                    out_session2++;
+                }
+            });
+        }
+
+        function refeshTitle() {
+            if (!new_mess && !new_order) {
+                document.title = old_title;
+            } else {
+                new_title = "Bạn có tin nhắn mới - Tạp Hóa MMO";
+                if (document.title == old_title) {
+                    document.title = new_title;
+                } else {
+                    document.title = old_title;
+                }
+
+            }
+
+
+        }
+
+        function checkNewPostInWeek() {
+            $.ajax({
+                url: "/post/new-post-in-week",
+                type: "get",
+                data: {},
+                success: function (result) {
+                    if("0" !== result.NEW_POST_IN_WEEK) {
+                        document.getElementById("post_new").innerHTML = result.NEW_POST_IN_WEEK;
+                        $('#post_new').addClass("indicator__value");
+                    } else {
+                        document.getElementById("post_new").innerHTML = "";
+                        $('#post_new').removeClass("indicator__value");
+                    }
+                },
+                error: function (error) {
+                    console.log(error)
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            old_title = document.title;
+            checkFullNoff();
+            checkNewPostInWeek();
+            setInterval(function () {
+                checkFullNoff();
+            }, 20000);
+            setInterval(function () {
+                refeshTitle();
+            }, 2000);
+            setInterval(function () {
+                checkNewPostInWeek()
+            }, 300000);
+        });
+
+
+    </script>
+    <script>
+        var time = new Date().getTime();
+        $(document.body).bind("mousemove keypress", function (e) {
+            time = new Date().getTime();
+        });
+
+        function refresh() {
+            if (new Date().getTime() - time >= 300000) {
+                time = new Date().getTime();
+                window.location.reload(true);
+            }
+
+        }
+
+        setInterval(function () {
+            refresh();
+        }, 60000);
+        //
+        // function logoutAllDevices() {
+        //     $('#logoutAllModal').modal({
+        //         backdrop: false,
+        //         show: true
+        //     });
+        // }
+        //
+        // $(document).ready(function() {
+        //     $('#confirmLogoutBtn').click(function() {
+        //         var btn = $(this);
+        //         var originalText = btn.html();
+        //
+        //         btn.prop('disabled', true);
+        //         btn.html('<i class="fas fa-spinner fa-spin"></i> Đang xử lý...');
+        //
+        //         var csrfToken = $('meta[name="_csrf"]').attr('content');
+        //         var csrfHeader = $('meta[name="_csrf_header"]').attr('content');
+        //
+        //         var headers = {};
+        //         if (csrfToken && csrfHeader) {
+        //             headers[csrfHeader] = csrfToken;
+        //         }
+        //         headers['X-Requested-With'] = 'XMLHttpRequest';
+        //
+        //         $.ajax({
+        //             url: '/api/logout-all',
+        //             type: 'POST',
+        //             headers: headers,
+        //             success: function(data) {
+        //                 if (data.success) {
+        //                     $('#logoutAllModal').modal('hide');
+        //
+        //                     if (typeof toastr !== 'undefined') {
+        //                         toastr.info(data.message || 'Đã đăng xuất khỏi tất cả thiết bị!', 'Thành công!');
+        //                     } else {
+        //                         alert((data.message || 'Đã đăng xuất khỏi tất cả thiết bị!'));
+        //                     }
+        //
+        //                     setTimeout(function() {
+        //                         window.location.href = '/login.html?logout=all';
+        //                     }, 2000);
+        //
+        //                 } else {
+        //                     if (typeof toastr !== 'undefined') {
+        //                         toastr.error(data.message || 'Không thể đăng xuất', 'Lỗi!');
+        //                     } else {
+        //                         alert('Lỗi: ' + (data.message || 'Không thể đăng xuất'));
+        //                     }
+        //
+        //                     btn.prop('disabled', false);
+        //                     btn.html(originalText);
+        //                 }
+        //             },
+        //             error: function(xhr, status, error) {
+        //                 console.error('Logout error:', error);
+        //                 $('#logoutAllModal').modal('hide');
+        //
+        //                 if (xhr.status === 401) {
+        //                     if (typeof toastr !== 'undefined') {
+        //                         toastr.warning('Phiên đăng nhập đã hết hạn', 'Cảnh báo!');
+        //                     } else {
+        //                         alert('Phiên đăng nhập đã hết hạn');
+        //                     }
+        //                     setTimeout(function() {
+        //                         window.location.href = '/login.html?expired=true';
+        //                     }, 1500);
+        //                 } else {
+        //                     if (typeof toastr !== 'undefined') {
+        //                         toastr.error('Có lỗi xảy ra, vui lòng thử lại', 'Lỗi!');
+        //                     } else {
+        //                         alert('Có lỗi xảy ra, vui lòng thử lại');
+        //                     }
+        //
+        //                     btn.prop('disabled', false);
+        //                     btn.html(originalText);
+        //                 }
+        //             }
+        //         });
+        //     });
+        //
+        //     $('#logoutAllModal').on('hidden.bs.modal', function() {
+        //         $('#confirmLogoutBtn').prop('disabled', false);
+        //         $('#confirmLogoutBtn').html('Đăng xuất tất cả');
+        //     });
+        //
+        //     $('#logoutAllModal').on('click', function(event) {
+        //         if (event.target === this) {
+        //             $(this).modal('hide');
+        //         }
+        //     });
+        // });
+    </script>
+<!--    <style>-->
+<!--        #logoutAllModal.show {-->
+<!--            background-color: rgba(0, 0, 0, 0.5) !important;-->
+<!--        }-->
+
+<!--        #logoutAllModal .modal-content {-->
+<!--            border-radius: 8px;-->
+<!--        }-->
+
+<!--        #logoutAllModal .modal-header {-->
+<!--            background-color: #f8f9fa;-->
+<!--            border-bottom: 1px solid #dee2e6;-->
+<!--        }-->
+
+<!--        #logoutAllModal .btn-warning {-->
+<!--            background-color: #ffc107;-->
+<!--            border-color: #ffc107;-->
+<!--        }-->
+<!--        .toast {-->
+<!--            opacity: 1 !important;-->
+<!--        }-->
+
+<!--        .toast-info {-->
+<!--            background-color: #17a2b8 !important;-->
+<!--            opacity: 1 !important;-->
+<!--        }-->
+
+<!--        .toast:hover {-->
+<!--            opacity: 1 !important;-->
+<!--            transform: scale(1.02);-->
+<!--            transition: all 0.2s ease;-->
+<!--        }-->
+
+<!--        #toast-container .toast {-->
+<!--            box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;-->
+<!--            border: 1px solid rgba(255,255,255,0.2) !important;-->
+<!--        }-->
+<!--    </style>-->
+</header>
+<!-- desktop site__header / end -->
+
+		<div class="site__body">
+			<div class="holder"><div class="preloader"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+			</div>
+			
+	<style>
+		.container {
+			max-width: 1170px;
+			margin: auto;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+		.inbox_people {
+			background: #f8f8f8 none repeat scroll 0 0;
+			float: left;
+			overflow: hidden;
+			width: 40%;
+			border-right: 1px solid #c4c4c4;
+			border-radius: 3px;
+		}
+		.emoji_picker{
+			z-index: 5003;
+			left: 0;
+			border-radius: 3px;
+			border: 1px #dfdfdf solid;
+			width: 82%;
+			margin-left: 40px;
+			padding:8px;
+			display:none;
+			position: absolute;
+			top: -76px;
+			bottom: 49px;
+			background-color: #fff;
+			overflow: auto;
+		}
+		.sample_picker{
+			z-index: 5003;
+			left: 0;
+			border-radius: 3px;
+			border: 1px #dfdfdf solid;
+			width: 82%;
+			margin-left: 40px;
+			padding:8px;
+			display:none;
+			position: absolute;
+			top: -150px;
+			bottom: 49px;
+			background-color: #fff;
+			overflow-y: auto; 
+ 			overflow-x: hidden; 
+		}
+		.inbox_msg {
+			border: 1px solid #c4c4c4;
+			clear: both;
+			overflow: hidden;
+			width: 100%;
+			border-radius: 3px;
+		}
+
+		.top_spac {
+			margin: 20px 0 0;
+		}
+
+
+		.recent_heading {
+			float: left;
+			width: 40%;
+		}
+
+		.srch_bar {
+			display: inline-block;
+			text-align: right;
+			width: 60%;
+		}
+
+		.headind_srch {
+			padding: 10px 29px 10px 20px;
+			overflow: hidden;
+			border-bottom: 1px solid #c4c4c4;
+		}
+
+		.recent_heading h4 {
+
+			font-size: 21px;
+			margin: auto;
+		}
+
+		.srch_bar input {
+			border: 1px solid #cdcdcd;
+			border-width: 0 0 1px 0;
+			width: 80%;
+			padding: 2px 0 4px 6px;
+			background: none;
+		}
+
+		.srch_bar .input-group-addon button {
+			background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+			border: medium none;
+			padding: 0;
+			color: #707070;
+			font-size: 18px;
+		}
+
+		.srch_bar .input-group-addon {
+			margin: 0 0 0 -27px;
+		}
+
+		.chat_ib h5 {
+			font-size: 15px;
+			color: #464646;
+			margin: 0 0 8px 0;
+		}
+
+		.chat_ib h5 span {
+			font-size: 13px;
+			float: right;
+		}
+
+		.chat_ib p {
+			font-size: 14px;
+			color: #989898;
+			margin: auto
+		}
+
+		.chat_img {
+			float: left;
+			width: 11%;
+		}
+
+		.chat_ib {
+			float: left;
+			padding: 0 0 0 15px;
+			width: 88%;
+		}
+
+		.chat_people {
+			overflow: hidden;
+			clear: both;
+		}
+
+		.chat_list {
+			border-bottom: 1px solid #c4c4c4;
+			margin: 0;
+			padding: 18px 16px 10px;
+			cursor: pointer;
+		}
+
+		.inbox_chat {
+			height: 500px;
+			overflow-y: scroll;
+		}
+
+		.active_chat {
+			background: #d2dde0;
+		}
+
+		.incoming_msg_img {
+			display: inline-block;
+			width: 6%;
+		}
+
+		.received_msg {
+			display: inline-block;
+			padding: 0 0 0 10px;
+			vertical-align: top;
+			width: 92%;
+		}
+
+		.received_withd_msg p {
+			background: #ebebeb none repeat scroll 0 0;
+			border-radius: 3px;
+			color: #646464;
+			font-size: 14px;
+			margin: 0;
+			padding: 5px 10px 5px 12px;
+			width: 100%;
+		}
+
+		.time_date {
+			color: #747474;
+			display: block;
+			font-size: 12px;
+			margin: 8px 0 0;
+		}
+		.time_date_error {
+			color: red;
+			display: block;
+			font-size: 12px;
+			margin: 8px 0 0;
+		}
+		.noff_list {
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			color: red;
+			font-size: 15px;
+			/* padding: 0px; */
+			margin: 2px;
+			/* padding-bottom: 9px; */
+		}
+
+		.received_withd_msg {
+			width: 57%;
+		}
+
+		.mesgs {
+			float: left;
+			padding: 52px 15px 0 25px;
+			width: 60%;
+			position: relative;
+		}
+
+		.sent_msg p {
+			background: #05728f none repeat scroll 0 0;
+			border-radius: 3px;
+			font-size: 14px;
+			margin: 0;
+			color: #fff;
+			padding: 5px 10px 5px 12px;
+			width: 100%;
+		}
+
+		.outgoing_msg {
+			overflow: hidden;
+			margin: 26px 0 26px;
+		}
+
+		.sent_msg {
+			float: right;
+			width: 46%;
+		}
+
+		.input_msg_write input {
+			background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+			border: medium none;
+			color: #4c4c4c;
+			font-size: 15px;
+			min-height: 48px;
+			width: 77%;
+			
+		}
+
+		.type_msg {
+			border-top: 1px solid #c4c4c4;
+			position: relative;
+		}
+
+		.msg_send_btn {
+			background: #05728f none repeat scroll 0 0;
+			border: medium none;
+			border-radius: 50%;
+			color: #fff;
+			padding: 0px;
+			cursor: pointer;
+			font-size: 17px;
+			height: 33px;
+			position: absolute;
+			right: 0;
+			top: 11px;
+			width: 33px;
+		}
+		.img_send_btn {
+			background: #05728f none repeat scroll 0 0;
+			border: medium none;
+			border-radius: 50%;
+			color: #fff;
+			padding: 0px;
+			cursor: pointer;
+			font-size: 17px;
+			height: 33px;
+			position: absolute;
+			right: 0;
+			top: 11px;
+			width: 33px;
+		}
+		.messaging {
+			width: 100%;
+
+		}
+
+		.msg_history {
+			height: 90%;
+			overflow-y: auto;
+		}
+		
+	</style>
+	<div>&nbsp;</div>
+	<div class="block">
+		<div class="container">
+			
+			<div class="row">
+				<div class="messaging">
+					<div class="inbox_msg">
+						<div id="list_chat" class="inbox_people">
+							<div class="headind_srch">
+								<div class="recent_heading">
+									<h4>Gần đây <i id="notify_icon" onclick="volumeChange(this);" style="font-size:15px; cursor: pointer;" title="Bật/Tắt âm thanh" class="fa fa-volume-up"></i></h4>
+								</div>
+								<div class="srch_bar">
+									<button title="Thu gọn" onclick="collapseList()" class="btn btn-secondary"><img
+											style="width: 20px;" src="/images/icon/colla.png" /> </button>
+								</div>
+								
+							</div>
+							<div id="inbox_chat" class="inbox_chat">
+								
+							</div>
+					</div>
+					<div  id="main_chat" class="mesgs">
+						<button id="show_button" title="Danh sách" onclick="showList()" style="display:none; position: absolute;top: 12px;left: 0px; z-index: 1;" class="btn btn-secondary">
+							<img style="width: 20px;" src="/images/icon/show.png"/>
+						 </button>
+						 <div style="text-align: center;width: 103%; height: 52px;background-color: #ebebeb;position: absolute;top: 0px;left: 0px; z-index: 0;" >
+						 	
+						 	<span style="font-size:17px;margin-bottom: -0.1rem; padding: 3px; font-weight: 900;" id="active_user" ><a id='lastUsername' href="/thong-tin/killian_iqu5vz" data-name="killian_iqu5vz" >@killian_iqu5vz</a></span>
+						 	<a style="font-size:11px;" id="time_online"></a>
+						 	
+						 	<p style="font-size:14px; margin-top: -2px;" ><span class="badge badge-warning"  >Xin hãy cảnh giác với giao dịch không được bảo hiểm bên ngoài sàn!</span></p>
+						 </div>
+						<div onclick="hideEmoji();" id="msg_history" class="msg_history" style="overflow-y: scroll;height: 500px;">
+
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p>chào bn</p>
+											<span class="time_date">14:44 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p>check dùm mình đơn này</p>
+											<span class="time_date">14:44 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p>Zen12345</p>
+											<span class="time_date">14:44 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="aadedfc4cdc5c1d29beacdc7cbc3c684c9c5c7">[email&#160;protected]</a></p>
+											<span class="time_date">14:45 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p>sai pasword</p>
+											<span class="time_date">14:45 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+								<div>
+									<div class="incoming_msg">
+										<div class="incoming_msg_img"> <img
+												src="/images/avatars/user.svg" alt="sunil"> </div>
+										<div class="received_msg">
+											<div class="received_withd_msg">
+												<p>Dạ shop thấy bạn mua 4 đơn bạn có thể cho shop xin cụ thể đơn nào bị sai pass </p>
+												<span  class="time_date">19:33 - 06/10</span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							
+								<div>
+									<div class="incoming_msg">
+										<div class="incoming_msg_img"> <img
+												src="/images/avatars/user.svg" alt="sunil"> </div>
+										<div class="received_msg">
+											<div class="received_withd_msg">
+												<p>Để shop bảo hành cho bạn ạ </p>
+												<span  class="time_date">19:33 - 06/10</span>
+											</div>
+										</div>
+									</div>
+									
+								</div>
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p>cho mình số zalo dễ làm việc nha</p>
+											<span class="time_date">23:38 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+								<div>
+									
+									<div class="outgoing_msg">
+										<div class="sent_msg">
+											<p>bị 2 con </p>
+											<span class="time_date">23:38 - 06/10</span>
+												
+										</div>
+									</div>
+								</div>
+							
+							
+						</div>
+						
+						<div class="type_msg">
+							<div id="emojiTab" class="emoji_picker">
+								<button onclick="emojiOut(1);"  type="button" class="btn btn-light btn-sm"><img src="/emoji/1.png" width="20"></img></button>
+								<button onclick="emojiOut(2);"  type="button" class="btn btn-light btn-sm"><img src="/emoji/2.png" width="20"></img></button>
+								<button onclick="emojiOut(3);"  type="button" class="btn btn-light btn-sm"><img src="/emoji/3.png" width="20"></img></button>
+								<button onclick="emojiOut(4);"  type="button" class="btn btn-light btn-sm"><img src="/emoji/4.png" width="20"></img></button>
+								<button onclick="emojiOut(5);" type="button" class="btn btn-light btn-sm"><img src="/emoji/5.png" width="20"></img></button>
+								<button onclick="emojiOut(6);" type="button" class="btn btn-light btn-sm"><img src="/emoji/6.png" width="20"></img></button>
+								<button onclick="emojiOut(7);" type="button" class="btn btn-light btn-sm"><img src="/emoji/7.png" width="20"></img></button>
+								<button onclick="emojiOut(8);" type="button" class="btn btn-light btn-sm"><img src="/emoji/8.png" width="20"></img></button>
+								<button onclick="emojiOut(9);" type="button" class="btn btn-light btn-sm"><img src="/emoji/9.png" width="20"></img></button>
+								<button onclick="emojiOut(10);" type="button" class="btn btn-light btn-sm"><img src="/emoji/10.png" width="20"></img></button>
+								<button onclick="emojiOut(11);" type="button" class="btn btn-light btn-sm"><img src="/emoji/11.png" width="20"></img></button>
+								<button onclick="emojiOut(12);" type="button" class="btn btn-light btn-sm"><img src="/emoji/12.png" width="20"></img></button>
+								<button onclick="emojiOut(13);" type="button" class="btn btn-light btn-sm"><img src="/emoji/13.png" width="20"></img></button>
+								<button onclick="emojiOut(14);" type="button" class="btn btn-light btn-sm"><img src="/emoji/14.png" width="20"></img></button>
+								<button onclick="emojiOut(15);" type="button" class="btn btn-light btn-sm"><img src="/emoji/15.png" width="20"></img></button>
+								<button onclick="emojiOut(16);" type="button" class="btn btn-light btn-sm"><img src="/emoji/16.png" width="20"></img></button>
+								
+							</div>
+							<div id="sampleTab" class="sample_picker">
+								<div id="listSample">
+									<div class="row">
+										<div class="col-1"><button data-key=10  class="btn btn-sm  btn-default"><span class="fa fa-trash" aria-hidden="true"></span></button></div>
+									    <div class="col-11"><span style="cursor: pointer;" onclick="sendSampleMessage(this);"  class="badge badge-success">Xin chào!</span></div>
+									</div>
+								</div>
+								<div class="row">
+									<div class="col-1"><button onclick="addSample()" class="btn btn-sm  btn-default"><span style="font-size: 20px;" class="fas fa-plus-circle" aria-hidden="true"></span></button></div>
+								    <div class="col-10"><input id="sampleInputText" class="form-control-sm" style=" width: 80%;" > </div>
+								</div>
+								
+								
+								
+							</div>
+							<div class="input_msg_write" style="padding-top: 5px;">
+							
+								<button style="width: 5%;padding: 1px;" class="btn btn-sm  btn-default" title="Gởi ảnh" data-toggle="modal" data-target="#uploadModal" ><span class="fa fa-file-image"
+										aria-hidden="true"></span></button>
+								<button style="width: 5%;padding: 1px;" class="btn btn-sm  btn-default" title="Biểu cảm" onclick="emojiAction()"  ><span class="far fa-smile"
+										aria-hidden="true"></span></button>
+								<button style="width: 5%;padding: 1px;" class="btn btn-sm  btn-default" title="Mẫu câu" onclick="sampleAction()"  ><span class="fa fa-book"
+								aria-hidden="true"></span></button>
+								<input onclick="hideEmoji();" id="chatMessage" type="text" class="write_msg" placeholder="Type a message" conversion-id="10f01c75-2282-4a7c-958f-4e0a60e3607a" />
+								
+								<button  onclick=sendChatMessage() class="msg_send_btn" type="button"><a style="padding-left: 0px;" class="fa fa-paper-plane"
+										aria-hidden="true"></a></button>
+							</div>
+						</div>
+						<p id="error_code" style="text-align: right;width: 100%; color: red; font-size: 13px;"></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<!-- Modal -->
+		<div id="uploadModal" class="modal fade" role="dialog">
+		  <div class="modal-dialog">
+		
+		    <!-- Modal content-->
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        
+		        <h4 class="modal-title">Chọn ảnh tải lên</h4>
+		        <button type="button" class="close" data-dismiss="modal">&times;</button>
+		      </div>
+		      <div class="modal-body">
+		        <!-- Form -->
+		        <form method='post' action='' enctype="multipart/form-data" >
+		          Chọn ảnh : <input type='file' name='file' id='file' accept="image/*" class='form-control' ><br>
+		          <p class="text-danger" id='error_upload'></p>
+		          <input type='button' class='btn btn-info' onclick="uploadImg();" value='Upload' id='btn_upload'/>
+		           
+		        </form>
+				<br>
+		        <!-- Preview-->
+		        <div style="display:none;" id='preview'>
+		        	<img src="" id="img" width="100%" ><br><br>
+		        	<button type='button' onclick="sendImg();" data-dismiss="modal" class='btn btn-info' >Gửi</button>
+		        </div>
+		      </div>
+		 
+		    </div>
+		
+		  </div>
+		</div>
+		
+		
+		
+	</div>
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+			var mylog="test";
+			var chatHref= '<a href="/chat-box.html?chat_to=';
+		</script>
+	
+	
+	<script>
+		
+		function volumeChange(element){
+			var class_name= element.className;
+			if(class_name=="fa fa-volume-up"){
+				element.className="fas fa-volume-mute";
+				localStorage.setItem("volume", "off");
+				isVolumeOn = false;
+			}else{
+				element.className="fa fa-volume-up";
+				localStorage.setItem("volume", "on");
+				isVolumeOn = true;
+			}
+		}
+		var ListSave =null;
+		function loadSample(){
+			 ListSave =JSON.parse( localStorage.getItem("ListSample"));
+			 if(ListSave==null){
+				var newSaveOb = { text:"Xin chào!"};
+				ListSave = [newSaveOb].concat(ListSave) ;
+			 }
+			 $("#listSample").empty();
+			 var sumHtml="";
+			 for(var k in ListSave) {
+				if(ListSave[k]!=null){
+					sumHtml = sumHtml+
+					'<div class="row">'+
+						'<div class="col-1"><button data-key='+k+' onclick="deleteSample('+k+')" class="btn btn-sm  btn-default"><span class="fa fa-trash" aria-hidden="true"></span></button></div>'+
+					   ' <div class="col-11"><span style="cursor: pointer; background-color: #05728f;" onclick="sendSampleMessage(this);"  class="badge badge-success">'+ListSave[k].text+'</span></div>'+
+					'</div>';
+				}
+				 $("#listSample").html(sumHtml);
+				  
+			}
+			
+		}
+		function addSample(){
+			var codeString = $("#sampleInputText").val();
+			if(codeString=="" ){
+				$("#save_error").text("Lỗi. Chưa điền đủ thông tin.");
+			}else{
+				var newSaveOb = { text:codeString};
+				ListSave = [newSaveOb].concat(ListSave) ;
+				localStorage.setItem("ListSample", JSON.stringify( ListSave));
+				loadSample();
+				 $("#sampleInputText").val("");
+			}
+		}
+		function deleteSample(_index){
+			ListSave.splice(_index,1);
+			localStorage.setItem("ListSample", JSON.stringify( ListSave));
+			loadSample();
+			
+		}
+		function emojiOut(code){
+			$("#chatMessage").val($("#chatMessage").val()+"[EMO]"+code+"[/EMO]");
+			
+		}
+		function emojiAction(){
+			$("#sampleTab").hide();
+			if($('#emojiTab:visible').length == 0)
+			{
+				$("#emojiTab").show();
+			}else{
+				$("#emojiTab").hide();
+			}
+			
+		}
+		function sampleAction(){
+			$("#emojiTab").hide();
+			if($('#sampleTab:visible').length == 0)
+			{
+				$("#sampleTab").show();
+			}else{
+				$("#sampleTab").hide();
+			}
+			
+		}
+		function sendSampleMessage(elem){
+			var text = elem.textContent;
+			$('#chatMessage').val($('#chatMessage').val()+" "+text);
+		}
+		function hideEmoji(){
+			$("#emojiTab").hide();
+			$("#sampleTab").hide();
+		}
+		function sendImg(){
+			var img =  $("#img").attr("src");
+			$('#chatMessage').val("[img]"+img+"[/img]");
+			sendChatMessage(true);
+			 $("#preview").hide(); 
+		}
+		function uploadImg(){
+			 var fd = new FormData();
+		        var files = $('#file')[0].files;
+		        
+		        // Check file selected or not
+		        if(files.length > 0 ){
+		           fd.append('file',files[0]);
+		
+		           $.ajax({
+		              url: '/api/img/upload',
+		              type: 'post',
+		              data: fd,
+		              contentType: false,
+		              processData: false,
+		              async:false,
+		              success: function(response){
+		                 if(response.includes("OK|")){
+		                    $("#img").attr("src",response.replace("OK|","/")); 
+		                    
+		                    $("#preview").show(); 
+		                 }else{
+		                    $("#error_upload").text(response);
+		                 }
+		              },
+		           });
+		        }else{
+		           $("#error_upload").text("Hãy chọn 1 ảnh!");
+		     }
+			
+		}
+		var out_session1 = 0;
+		var check_date = new Date();
+		function sendChatMessage(isImg=false) {
+			 hideEmoji();
+			var newDate = new Date();
+			var seconds = (newDate - check_date) / 1000;
+			if (seconds > 1) {
+				var id = $('#chatMessage').attr("conversion-id");
+				var message = $('#chatMessage').val();
+				$('#chatMessage').val('');
+				if (message != "") {
+					var element = document.getElementById("msg_history");
+					var dt = new Date();
+					var time = dt.getHours() + ":" + dt.getMinutes() + " - " + dt.getDate() + "/" + (dt.getMonth() + 1);
+					//message = $.parseHTML(message),nodeNames = [];
+					//console.log(message);
+					var messageUI="";
+					if(isImg){
+						
+						messageUI = message.replace("[/img]","").replace("[img]","");
+						messageUI = "<a href='"+messageUI+"' target='_blank'><img src='"+messageUI+"'></a>";
+					}else{
+						messageUI = message.replace(/\[EMO\](.+?)\[\/EMO\]/g,'<img width="20" src="/emoji/$1.png"/>');
+					}
+					var guiID = uuidv4();
+					$('#msg_history').append("<div><div class='outgoing_msg'><div class='sent_msg'><p>" + messageUI + "</p><span id='"+guiID+"' class='time_date'  >" + time + "</span></div></div></div>");
+					$('#msg_history').animate({scrollTop: element.scrollHeight}, "slow");
+					$('#error_code').text("");
+					
+					$.ajax({
+						url: "/api/sendNewMessage/" + id,
+						type: "post",
+						dataType: "text",
+						data: {
+							message: message,
+							mylog:mylog
+						},
+						success: function (result) {
+							if (result == "OK") {
+								
+								check_date = newDate;
+							}else{
+								$("#"+guiID).text($("#"+guiID).text()+" - Send error!");
+								$("#"+guiID).toggleClass('time_date time_date_error');
+							}
+						}, error: function () {
+							$("#"+guiID).text($("#"+guiID).text()+" - Send error!");
+							$("#"+guiID).toggleClass('time_date time_date_error');
+						}
+					});
+				}
+			} else {
+				alert("Quá nhanh!");
+			}
+		}
+		var lastConversion = "";
+		function getNewConversion() {
+			if (out_session1 > 8) {return;}
+			var guest_name = $('#lastUsername').attr('data-name');
+			$.ajax({
+				url : "/api/getNewConversion",
+				type : "post",
+				dataType:"text",
+				data : {
+					guest_name:guest_name,
+					mylog:mylog
+				},
+				success : function (result){
+					out_session1=0;
+					if(String(result)!=lastConversion){
+						lastConversion=String(result);
+						var jsonData = JSON.parse(result);
+						$('#inbox_chat').empty();
+						for (var i = 0; i < jsonData.length; i++) {
+							 var counter = jsonData[i];
+							 var classInner="chat_list";
+							 if(counter.active){
+								$('#active_user').html("<a  id='lastUsername' href='/thong-tin/"+counter.guest_user+"' data-name='"+counter.guest_user+"'>@"+counter.htmlName+"</a>");
+								if(counter.lastOnline=="Online"){
+									$('#time_online').css("color","#21bf73");
+								}else{
+									$('#time_online').css("color","#989898");
+								}
+								$('#time_online').text(counter.lastOnline);
+								classInner="chat_list active_chat";}
+							 var dt = new Date(counter.date)
+							 var time = dt.getDate()+"/"+(dt.getMonth()+1)+"/"+dt.getFullYear();
+							 var noff="";
+							 if(counter.newMes>0){
+									noff= '<span style="margin: 2px;" class=" noff_list indicator__value">'+counter.newMes+'</span>';
+								}
+							var userImage=counter.avatar;
+							 var html = chatHref +counter.guest_user+'">'+
+											'<div class="'+classInner+'">'+
+												'<div style="position: relative;" class="chat_people">'+
+													'<div class="chat_img"> <img src="'+userImage+'"'+
+															'alt="sunil"/>'+
+															noff +
+													' </div>'+
+													'<div class="chat_ib">'+
+														'<div style="padding-left:15px" class= row>'+
+															'<h5 style="width: 75%;" id="gest_name" >'+counter.htmlName+'</h5>'+
+															'<h5 style="width: 20%;"><span class="chat_date" >'+time+'</span></h5>'+
+														'</div>'+
+														'<p>'+counter.last_chat+'</p>'+
+													'</div>'+
+												'</div>'+
+											'</div>'+
+										'</a>';
+							$('#inbox_chat').append(html);
+							
+						}
+						var activeElm = $(".active_chat");
+						console.log(activeElm.offset().top);
+						$('#inbox_chat').animate({ scrollTop: activeElm.offset().top-250}, 0);
+						
+					}
+				},
+				error: function () {
+					   out_session1++;
+				 }
+			});
+
+		}
+		 function getNewMessage(){
+			if(out_session1>8){return;}
+			var id= $('#chatMessage').attr("conversion-id");
+			$.ajax({
+		                    url : "/api/getNewMessage/"+id,
+		                    type : "post",
+		                    dataType:"text",
+		                    async:false,
+		                    data : {
+								mylog:mylog
+		                    },
+		                    success : function (result){
+								out_session1 =0;
+		                       var jsonData = JSON.parse(result);
+		                      // console.log(result);
+								for (var i = 0; i < jsonData.length; i++) {
+								    var counter = jsonData[i];
+								   // console.log(counter.message);
+								    var message=counter.message;
+								    var dt = new Date(counter.date)
+								    var time = dt.getHours() + ":" + dt.getMinutes() +" - "+dt.getDate()+"/"+(dt.getMonth()+1);
+								    if(counter.isFromTele){time = time+"|From Telegram";}
+								    $('#msg_history').append('<div class="incoming_msg"><div class="incoming_msg_img"> <img src="'+counter.avatar+'" alt="sunil"> </div> <div class="received_msg"> <div class="received_withd_msg"> <p>'+message+'</p><span class="time_date">'+time+'</span></div></div></div>');
+								    var element = document.getElementById("msg_history");
+								    $('#msg_history').animate({ scrollTop: element.scrollHeight}, "slow");
+								}
+		                    },
+		                    error: function () {
+							       out_session1++;
+							 }
+		                });
+		}
+		function collapseList() {
+			$('#list_chat').css({'width': '0%'});
+			$('#main_chat').css({'width': '98%'});
+			$('#show_button').show();
+		}
+		function showList() {
+			if ($(window).width() >= 975) {
+				$('#list_chat').css({'width': '35%'});
+				$('#main_chat').css({'width': '63%'});
+			} else {
+				$('#list_chat').css({'width': '80%'});
+				$('#main_chat').css({'width': '17%'});
+			}
+			$('#show_button').hide();
+		}
+		function uuidv4() {
+		  return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+		    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+		  );
+		}
+		$(document).ready(function () {
+			var heigh = $(window).height();
+			if (heigh > 300) {
+				heigh = heigh - 200;
+				$('.inbox_chat').height(heigh);
+				$('.msg_history').height(heigh - 43);
+			}
+			$('#site_footer').hide();
+			if ($(window).width() < 975) {
+				collapseList();
+			}
+			loadSample();
+			
+			var element = document.getElementById("msg_history");
+			$('#msg_history').animate({scrollTop: element.scrollHeight+50}, "fast");
+			$("#chatMessage").on('keyup', function (e) {
+				if (e.key === 'Enter' || e.keyCode === 13) {
+					sendChatMessage();
+				}
+			});
+			getNewConversion();
+		    setInterval(function(){ getNewMessage(); }, 2000);
+		    setInterval(function(){ getNewConversion(); }, 5000);
+
+			var volume = localStorage.getItem("volume");
+			
+			if(volume==null){
+				localStorage.setItem("volume", "on");
+			}else if(volume=="off"){
+				$("#notify_icon").removeClass("fa-volume-up");
+				$("#notify_icon").addClass("fa-volume-mute");
+				
+				
+			}else{
+				$("#notify_icon").removeClass("fa-volume-mute");
+				$("#notify_icon").addClass("fa-volume-up");
+				
+			}
+		});
+	</script>
+	
+
+		</div>
+		<!-- site__footer -->
+<footer class="site__footer">
+	<div id="site_footer" class="site-footer">
+		<div class="container">
+			<div class="site-footer__widgets">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="site-footer__widget footer-contacts">
+							<h5 class="footer-contacts__title">Liên hệ</h5>
+							<div class="footer-contacts__text">Liên hệ ngay nếu bạn có khó khăn khi sử dụng dịch vụ hoặc cần hợp tác.</div>
+							<ul class="footer-contacts__contacts">
+								<li><i class="footer-contacts__icon fa fa-paper-plane"></i><a rel="nofollow" href="/chat-box.html?chat_to=taphoammo" target="_blank">Chat với hỗ trợ viên</a></li>
+								<li><i class="footer-contacts__icon fab fa-facebook"></i><a rel="nofollow" target="_blank"
+										href="https://www.facebook.com/taphoammo11"> Tạp hóa MMO</a></li>
+								<li><i class="footer-contacts__icon far fa-envelope"></i> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c9babcb9b9a6bbbd89bda8b9a1a6a8a4a4a6e7a7acbd">[email&#160;protected]</a></li>
+								<li><i class="footer-contacts__icon far fa-clock"></i> Mon-Sat 08:00am - 10:00pm</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4">
+						<div class="site-footer__widget footer-links">
+							<h5 class="footer-links__title">Thông tin</h5>
+							<ul class="footer-links__list">
+								<li class="footer-links__item"><span class="footer-links__link">Một ứng dụng nhằm kết nối, trao đổi, mua bán trong cộng đồng kiếm tiền online.</span></li>
+								<li class="footer-links__item"><span class="footer-links__link">Thanh toán tự động, nhận hàng ngay tức thì.</span></li>
+								<li class="footer-links__item"><a rel="nofollow" href="/FAQs.html" class="footer-links__link">Câu hỏi thường gặp</a></li>
+								<li class="footer-links__item"><a rel="nofollow" href="/quy-dinh.html" class="footer-links__link">Điều khoản sử dụng</a></li>
+
+							</ul>
+						</div>
+					</div>
+
+					<div class="col-12 col-md-12 col-lg-4">
+						<div class="site-footer__widget footer-newsletter">
+							<h5 class="footer-newsletter__title">Đăng ký bán hàng</h5>
+							<div class="footer-newsletter__text">Tạo một gian hàng của bạn trên trang của chúng tôi. Đội ngũ hỗ trợ sẽ liên lạc để giúp bạn tối ưu khả năng bán hàng.</div>
+							<div>
+								<a rel="nofollow" class="footer-newsletter__form-button btn btn-primary"
+								 href="/register.html"	style="background-color:#21bf73; color: #fff;">Tham gia</a>
+							</div>
+							<div class="footer-newsletter__text footer-newsletter__text--social">Theo dõi chúng tôi trên mạng xã hội</div>
+							<!-- social-links -->
+							<div class="social-links footer-newsletter__social-links social-links--shape--circle">
+								<ul class="social-links__list">
+									<li class="social-links__item">
+										<a class="social-links__link social-links__link--type--rss">
+											<i class="fas fa-rss"></i>
+										</a>
+									</li>
+									<li class="social-links__item">
+										<a rel="nofollow" class="social-links__link social-links__link--type--youtube" 
+											href="https://www.youtube.com/"
+											target="_blank">
+												<i class="fab fa-youtube"></i>
+										</a>
+									</li>
+									<li class="social-links__item">
+										<a rel="nofollow" class="social-links__link social-links__link--type--facebook" 
+											href="https://www.facebook.com/taphoammo11"
+											target="_blank">
+												<i class="fab fa-facebook-f"></i>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<!-- social-links / end -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="site-footer__bottom">
+				<div class="site-footer__copyright">
+					<a rel="nofollow" target="_blank" href="https://www.facebook.com/taphoammo11"> <b>All rights reserved:</b></a>
+					<a rel="nofollow" target="_blank" href="https://www.facebook.com/taphoammo11"> <b>TAPHOAMMO.NET</b></a>
+				</div>
+			</div>
+		</div>
+		<div class="totop">
+			<div class="totop__body">
+				<div class="totop__start" style="display: flex;">
+					
+				</div>
+				<div class="totop__container container_fix"></div>
+				<div class="totop__end">
+					<button type="button" class="totop__button" style="background-color: #21bf73;">
+						<svg width="13px" height="8px">
+							<use xlink:href="/images/svg/sprite.svg#arrow-rounded-up-13x8"></use>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+		<html>
+      <style>
+      	.super_note{
+			width: 350px; 
+			border: 1px solid #21bf73;
+			border-radius: 3px; 
+			color: white; 
+			background-color:#21bf73 ;
+			z-index: 1000; 
+			position: fixed;
+    		bottom: 15px;
+    		box-shadow:2px 3px 3px #888888;
+    		overflow: hidden;
+    		display:none
+		}
+      </style>
+      <div id="super_note" class="super_note">
+      		<div class="row">
+      			<div  class="col-3" >
+      				<button  onclick="hideNoteDetail();" style="background-color: #21bf73;padding: 13px;height: 100%;" class="indicator__area btn">
+      					<i class="far fa-bell" style="font-size:20px;color:white;"></i>
+      					<span style="display: inline;" class="indicator__value">1</span>
+      				</button>
+      			</div>
+      			<div id="body_note" class="col-9" style="margin: auto; text-align: center; padding: 5px;">
+      				<div >
+      					<a id="note_url" href="/">
+							<b><span id="note_header" style="font-size: 16px;color:white;"></span></b><br>
+							<div id="note_body" style="font-size: 13px;color:white; "></div>
+							<span  id="note_status" class="badge badge-warning" style="font-size: 12px; "></span><br>
+						</a>
+						
+					</div>
+      			</div>
+      		</div>
+		</div>
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+			var isHidden = false;
+			function hideNoteDetail(){
+				if(!isHidden){
+					isHidden = true;
+					localStorage.setItem("hide_note","true");
+					$("#body_note").hide();
+					$("#super_note").animate({
+				        width: "50px"
+				    }, 300 );
+			    }else{
+					isHidden=false;
+					localStorage.setItem("hide_note","false");
+					$("#super_note").animate({
+				        width: "350px"
+				    }, 300 );
+				    $("#body_note").show();
+				}
+			}
+			var hideNote = localStorage.getItem("hide_note");
+			
+			if(hideNote==null || hideNote=="false"){
+				isHidden = true;
+			}else{
+				isHidden = false;
+			}
+			hideNoteDetail();
+			var diffsecond = 0;
+			$( document ).ready(function() {
+			    checkSupperNote();
+			    setInterval(checkSupperNote, 300000);
+			});
+			function countdownNote(){
+				diffsecond = diffsecond-1;
+				if(diffsecond<=0){
+					$("#note_status").text("Đang diễn ra");
+				}else{
+					 var days = Math.floor(diffsecond / ( 60 * 60 * 24));
+					 var hours = Math.floor((diffsecond % ( 60 * 60 * 24)) / ( 60 * 60));
+					 var minutes = Math.floor((diffsecond % ( 60 * 60)) / ( 60));
+					 var seconds = Math.floor((diffsecond % ( 60)) );
+					
+					  var displayCountdown = days + "d " + hours + "h "
+					  + minutes + "m " + seconds + "s ";
+					  $("#note_status").text("Sắp diễn ra: "+displayCountdown);
+				}
+				
+			}
+			function checkSupperNote(){
+				$.ajax({
+					url: "/get-event.html",
+					type: "POST",
+					async:false,
+					success: function (response) {
+						if(response.success){
+							
+							var note_header = response.event.header;
+							var note_body = response.event.body;
+							var note_start_time = response.event.startTime;
+							var note_end_time = response.event.endTime;
+							
+							$("#note_header").text(note_header);
+							$("#note_url").attr("href",response.event.link );
+							if(note_body!=null){
+								$("#note_body").text(note_body);
+							}
+							 var date1 = new Date(note_start_time);
+							  var date2 = new Date(note_end_time);
+							 var date3 = new Date();
+							 var startSeconds = parseInt((date3-date1)/1000);
+							 var endSeconds = parseInt((date3-date2)/1000);
+							 if(endSeconds>0){
+								$("#super_note").hide();
+							}else{
+								if(startSeconds>0 ){
+									$("#note_status").text("Đang diễn ra");
+								}else{
+									diffsecond = -startSeconds;
+									countdownNote();
+									 setInterval(countdownNote, 1000);
+								}
+								$("#super_note").show();
+							}
+							
+						}else{
+							$("#super_note").hide();
+						}
+					}
+				});
+			}
+		</script>
+</html>
+	</div>
+</footer>
+<!-- site__footer / end -->
+
+		
+	<!-- mobilemenu -->
+	<div class="mobilemenu">
+		<div class="mobilemenu__backdrop"></div>
+		<div class="mobilemenu__body">
+			<div class="mobilemenu__header">
+				<div class="mobilemenu__title">Menu</div>
+				<button type="button" class="mobilemenu__close">
+					<svg width="20px" height="20px">
+						<use xlink:href="/images/svg/sprite.svg#cross-20"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="mobilemenu__content">
+				<ul class="mobile-links mobile-links--level--0" data-collapse
+					data-collapse-opened-class="mobile-links__item--open">
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a href="/" class="mobile-links__item-link">Trang chủ</a>
+						</div>
+					</li>
+
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a data-collapse-trigger class="mobile-links__item-link">Sản phẩm</a>
+							<button class="mobile-links__item-toggle" type="button" data-collapse-trigger>
+								<svg class="mobile-links__item-arrow" width="12px" height="7px">
+									<use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-12x7"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="mobile-links__item-sub-links" data-collapse-content>
+							<ul class="mobile-links mobile-links--level--1">
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/email"
+												class="mobile-links__item-link">Email</a>
+										</div>
+									</li>
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/phan-mem"
+												class="mobile-links__item-link">Phần mềm</a>
+										</div>
+									</li>
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/tai-khoan"
+												class="mobile-links__item-link">Tài khoản</a>
+										</div>
+									</li>
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/danh-muc-khac"
+												class="mobile-links__item-link">Khác</a>
+										</div>
+									</li>
+								
+							</ul>
+						</div>
+					</li>
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a data-collapse-trigger class="mobile-links__item-link">Dịch vụ</a>
+							<button class="mobile-links__item-toggle" type="button" data-collapse-trigger>
+								<svg class="mobile-links__item-arrow" width="12px" height="7px">
+									<use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-12x7"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="mobile-links__item-sub-links" data-collapse-content>
+							<ul class="mobile-links mobile-links--level--1">
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/dich-vu-tuong-tac"
+												class="mobile-links__item-link">Tăng tương tác</a>
+										</div>
+									</li>
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/dich-vu-phan-mem"
+												class="mobile-links__item-link">Dịch vụ phần mềm</a>
+										</div>
+									</li>
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/dich-vu-blockchain"
+												class="mobile-links__item-link">Blockchain</a>
+										</div>
+									</li>
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/danh-muc/dich-vu-khac"
+												class="mobile-links__item-link">Dịch vụ khác</a>
+										</div>
+									</li>
+								
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a href="/support.html" class="mobile-links__item-link">Hỗ trợ</a>
+						</div>
+					</li>
+
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a data-collapse-trigger class="mobile-links__item-link">Công cụ</a>
+							<button class="mobile-links__item-toggle" type="button" data-collapse-trigger>
+								<svg class="mobile-links__item-arrow" width="12px" height="7px">
+									<use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-12x7"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="mobile-links__item-sub-links" data-collapse-content>
+							<ul class="mobile-links mobile-links--level--1">
+								<li class="mobile-links__item" data-collapse-item>
+									<div class="mobile-links__item-title">
+										<a href="/2FA.html" class="mobile-links__item-link">2FA</a>
+									</div>
+								</li>
+								<li class="mobile-links__item" data-collapse-item>
+									<div class="mobile-links__item-title">
+										<a href="/check-live-facebook.html" class="mobile-links__item-link">Check live FB</a>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</li>
+					
+					
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a href="/addFunds.html" class="mobile-links__item-link">Nạp tiền</a>
+						</div>
+					</li>
+					
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a class="mobile-links__item-link" href="/post/list.html">
+								Chia sẻ kinh nghiệm MMO
+							</a>
+						</div>
+					</li>
+
+<!--					<li class="mobile-links__item" data-collapse-item>-->
+<!--						<div class="mobile-links__item-title">-->
+<!--							<a class="mobile-links__item-link" th:href="@{/post/your-self.html}" >Bài viết của bạn</a></span>-->
+<!--						</div>-->
+<!--					</li>-->
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a href="#" data-collapse-trigger class="mobile-links__item-link">Thông tin tài khoản</a>
+							<button class="mobile-links__item-toggle" type="button" data-collapse-trigger>
+								<svg class="mobile-links__item-arrow" width="12px" height="7px">
+									<use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-12x7"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="mobile-links__item-sub-links" data-collapse-content>
+							<ul class="mobile-links mobile-links--level--1">
+								
+
+								
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/thong-tin/london_sn8m54" class="mobile-links__item-link">Thông tin tài khoản</a>
+										</div>
+									</li>
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/orders-buy.html" class="mobile-links__item-link">Đơn hàng đã mua</a>
+										</div>
+									</li>
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/wishlist.html" class="mobile-links__item-link">Gian hàng yêu thích</a>
+										</div>
+									</li>
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/payments.html" class="mobile-links__item-link">Lịch sử thanh toán</a>
+										</div>
+									</li>
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/reseller.html" class="mobile-links__item-link">Reseller</a>
+										</div>
+									</li>
+									<li class="mobile-links__item" data-collapse-item>
+										<div class="mobile-links__item-title">
+											<a href="/change-password.html" class="mobile-links__item-link">Đổi mật khẩu</a>
+										</div>
+									</li>
+								
+							</ul>
+						</div>
+					</li>
+
+					<li class="mobile-links__item" data-collapse-item>
+						<div class="mobile-links__item-title">
+							<a data-collapse-trigger class="mobile-links__item-link">Ngôn ngữ:</a>
+							<button class="mobile-links__item-toggle" type="button" data-collapse-trigger>
+								<svg class="mobile-links__item-arrow" width="12px" height="7px">
+									<use xlink:href="/images/svg/sprite.svg#arrow-rounded-down-12x7"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="mobile-links__item-sub-links" data-collapse-content>
+							<ul class="mobile-links mobile-links--level--1">
+								<li class="mobile-links__item" data-collapse-item>
+									<div class="mobile-links__item-title">
+										<a href="" class="mobile-links__item-link">English</a>
+									</div>
+								</li>
+								<li class="mobile-links__item" data-collapse-item>
+									<div class="mobile-links__item-title">
+										<a href="" class="mobile-links__item-link">Việt Nam</a>
+									</div>
+								</li>
+
+							</ul>
+						</div>
+					</li>
+					
+						<li class="mobile-links__item" data-collapse-item>
+							<div class="mobile-links__item-title">
+								<a href="/logout.html" class="mobile-links__item-link">Thoát</a>
+							</div>
+						</li>
+<!--						<li class="mobile-links__item" data-collapse-item>-->
+<!--							<div class="mobile-links__item-title">-->
+<!--								<a href="javascript:void(0)" onclick="logoutAllDevices()" class="mobile-links__item-link">-->
+<!--									Đăng xuất tất cả thiết bị-->
+<!--								</a>-->
+<!--							</div>-->
+<!--						</li>-->
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+<!--<script>-->
+<!--	function logoutAllDevices() {-->
+<!--		performLogoutAll();-->
+<!--	}-->
+
+<!--	function performLogoutAll() {-->
+
+<!--		var csrfToken = $('meta[name="_csrf"]').attr('content');-->
+<!--		var csrfHeader = $('meta[name="_csrf_header"]').attr('content');-->
+
+<!--		var headers = {};-->
+<!--		if (csrfToken && csrfHeader) {-->
+<!--			headers[csrfHeader] = csrfToken;-->
+<!--		}-->
+<!--		headers['X-Requested-With'] = 'XMLHttpRequest';-->
+
+<!--		$.ajax({-->
+<!--			url: '/api/logout-all',-->
+<!--			type: 'POST',-->
+<!--			headers: headers,-->
+<!--			success: function(data) {-->
+<!--				if (data.success) {-->
+<!--					if (typeof toastr !== 'undefined') {-->
+<!--						toastr.info(data.message || 'Đã đăng xuất khỏi tất cả thiết bị!', 'Thành công!');-->
+<!--					} else {-->
+<!--						alert((data.message || 'Đã đăng xuất khỏi tất cả thiết bị!'));-->
+<!--					}-->
+
+<!--					setTimeout(function() {-->
+<!--						window.location.href = '/login.html?logout=all';-->
+<!--					}, 2000);-->
+<!--				} else {-->
+<!--					if (typeof toastr !== 'undefined') {-->
+<!--						toastr.error(data.message || 'Không thể đăng xuất', 'Lỗi!');-->
+<!--					} else {-->
+<!--						alert('Lỗi: ' + (data.message || 'Không thể đăng xuất'));-->
+<!--					}-->
+<!--				}-->
+<!--			},-->
+<!--			error: function(xhr, status, error) {-->
+<!--				if (xhr.status === 401) {-->
+<!--					if (typeof toastr !== 'undefined') {-->
+<!--						toastr.warning('Phiên đăng nhập đã hết hạn', 'Cảnh báo!');-->
+<!--					} else {-->
+<!--						alert('Phiên đăng nhập đã hết hạn');-->
+<!--					}-->
+<!--					setTimeout(function() {-->
+<!--						window.location.href = '/login.html?expired=true';-->
+<!--					}, 1500);-->
+<!--				} else {-->
+<!--					if (typeof toastr !== 'undefined') {-->
+<!--						toastr.error('Có lỗi xảy ra', 'Lỗi!');-->
+<!--					} else {-->
+<!--						alert('Có lỗi xảy ra, vui lòng thử lại');-->
+<!--					}-->
+<!--				}-->
+<!--			}-->
+<!--		});-->
+<!--	}-->
+
+<!--	$(document).ready(function() {-->
+<!--	});-->
+<!--</script>-->
+<!--<style>-->
+<!--	.toast {-->
+<!--		opacity: 1 !important;-->
+<!--	}-->
+
+<!--	.toast-info {-->
+<!--		background-color: #17a2b8 !important;-->
+<!--		opacity: 1 !important;-->
+<!--	}-->
+
+<!--	.toast:hover {-->
+<!--		opacity: 1 !important;-->
+<!--		transform: scale(1.02);-->
+<!--		transition: all 0.2s ease;-->
+<!--	}-->
+
+<!--	#toast-container .toast {-->
+<!--		box-shadow: 0 4px 8px rgba(0,0,0,0.3) !important;-->
+<!--		border: 1px solid rgba(255,255,255,0.2) !important;-->
+<!--	}-->
+<!--</style>-->
+
+
+		
+		
+	<!-- js -->
+	<script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="/vendor/owl-carousel/owl.carousel.min.js"></script>
+	<script src="/vendor/nouislider/nouislider.min.js"></script>
+	<script src="/vendor/photoswipe/photoswipe.min.js"></script>
+	<script src="/vendor/photoswipe/photoswipe-ui-default.min.js"></script>
+	<script src="/vendor/select2/js/select2.min.js"></script>
+	<script src="/js/number.js"></script>
+	<script src="/js/main.js"></script>
+	<script src="/js/header.js"></script>
+	<script src="/vendor/svg4everybody/svg4everybody.min.js"></script>
+	<script src="/js/jquery.dataTables.min.js"></script>
+	<script src="/js/plugins/sweetalert.min.js"></script>
+	<script src="/js/plugins/toastr.min.js"></script>
+	<script src="/js/plugins/summernote/summernote.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+	<script>
+		hideLoading();
+		function showLoading() {
+			$('.holder').show();
+		}
+		function hideLoading() {
+			$('.holder').hide();
+		}
+		svg4everybody();
+
+		const token = $("meta[name='_csrf']").attr("content");
+		const header = $("meta[name='_csrf_header']").attr("content");
+		$(document).ajaxSend(function (e, xhr, options) {
+			xhr.setRequestHeader(header, token);
+		});
+	</script>
+	
+			<!-- Global site tag (gtag.js) - Google Analytics -->
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-1DX3JZJ613"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-1DX3JZJ613');
+		</script>
+
+
+	  
+
+
+
+		
+	</div>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"5ffa5782f4904dcb904f264582379ed4","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+
+</html>
