@@ -10,16 +10,14 @@
       }); var f = d.getElementsByTagName(s)[0],
         j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
           'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-T8GM7MN6');</script>
+    })(window, document, 'script', 'dataLayer', 'GTM-NK2NX2GB');</script>
   <!-- End Google Tag Manager -->
-  <!-- Consent granted (Thụy Sĩ - fire ngay) -->
-  <script>gtag('consent', 'update', { 'analytics_storage': 'granted', 'ad_storage': 'granted', 'ad_user_data': 'granted', 'ad_personalization': 'granted' });</script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Queen Nails & Lashes Bern | Nagelstudio & Wimpern | 10% Rabatt</title>
   <meta name="description"
-    content="Professionelle Maniküre, Pediküre, Wimpernverlängerung in Bern. Buchen Sie online via Treatwell – 10% Rabatt auf die erste Behandlung!">
+    content="Professionelle Nail-Behandlungen in Bern. Jetzt online buchen via Treatwell und 10% Rabatt auf alle Behandlungen bis zum 31. Mai 2026 sichern.">
   <meta name="keywords"
     content="Queen Nails Bern, Nagelstudio Bern, Wimpern Bern, Treatwell, Maniküre, Lash Extensions">
 
@@ -27,7 +25,7 @@
   <meta property="og:site_name" content="Queen Nails & Lashes Bern">
   <meta property="og:title" content="Queen Nails & Lashes Bern | Nagelstudio & Wimpern | 10% Rabatt">
   <meta property="og:description"
-    content="Professionelle Maniküre, Pediküre, Wimpernverlängerung in Bern. Buchen Sie online via Treatwell – 10% Rabatt auf die erste Behandlung!">
+    content="Professionelle Nail-Behandlungen in Bern. Jetzt online buchen via Treatwell und 10% Rabatt auf alle Behandlungen bis zum 31. Mai 2026 sichern.">
   <meta property="og:image" content="https://res.cloudinary.com/dutzxseaw/image/upload/v1760676605/Queen-03_mxp5vv.png">
   <meta property="og:url" content="https://queennailsbern.com">
   <meta property="og:type" content="website">
@@ -58,12 +56,16 @@
       --primary: #ff1493;
       --primary-dark: #d10074;
       --primary-light: #ff69b4;
-      --bg-glass: rgba(255, 255, 255, 0.85);
-      --bg-glass-dark: rgba(255, 255, 255, 0.95);
-      --text-main: #2c2c2c;
-      --shadow-soft: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
-      --border-glass: 1px solid rgba(255, 255, 255, 0.4);
-      --radius: 16px;
+      --ink: #241922;
+      --muted: #675965;
+      --surface: rgba(255, 250, 252, 0.72);
+      --surface-strong: rgba(255, 250, 252, 0.9);
+      --bg-glass: rgba(255, 250, 252, 0.84);
+      --bg-glass-dark: rgba(255, 250, 252, 0.94);
+      --text-main: var(--ink);
+      --shadow-soft: 0 18px 48px rgba(61, 21, 52, 0.14);
+      --border-glass: 1px solid rgba(255, 255, 255, 0.5);
+      --radius: 22px;
     }
 
     * {
@@ -79,6 +81,19 @@
       color: var(--text-main);
       line-height: 1.6;
       min-height: 100vh;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(255, 105, 180, 0.22), transparent 36%),
+        radial-gradient(circle at top right, rgba(255, 214, 236, 0.42), transparent 34%),
+        linear-gradient(180deg, rgba(255, 248, 252, 0.34), rgba(255, 248, 252, 0.18));
+      pointer-events: none;
+      z-index: 0;
     }
 
     /* Glassmorphism containers */
@@ -93,7 +108,7 @@
     }
 
     header {
-      background: rgba(255, 255, 255, 0.9);
+      background: rgba(255, 252, 254, 0.84);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
       padding: 15px 20px;
@@ -103,6 +118,12 @@
       z-index: 100;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
       border-bottom: var(--border-glass);
+      position: sticky;
+    }
+
+    header>* {
+      position: relative;
+      z-index: 1;
     }
 
     .logo {
@@ -146,9 +167,11 @@
     }
 
     .container {
-      max-width: 1000px;
-      margin: 30px auto;
+      max-width: 1120px;
+      margin: 34px auto 56px;
       padding: 20px;
+      position: relative;
+      z-index: 1;
     }
 
     /* Common Glass Card Style */
@@ -159,16 +182,16 @@
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-radius: var(--radius);
-      padding: 30px;
+      padding: 36px;
       margin-bottom: 40px;
       box-shadow: var(--shadow-soft);
       border: var(--border-glass);
     }
 
     .cta-bar {
-      background: var(--bg-glass-dark);
+      background: linear-gradient(180deg, rgba(255, 252, 254, 0.92), rgba(255, 245, 250, 0.82));
       backdrop-filter: blur(10px);
-      padding: 20px;
+      padding: 18px;
       border-radius: var(--radius);
       display: flex;
       justify-content: center;
@@ -181,31 +204,32 @@
 
     .btn-book,
     .btn-call {
-      padding: 14px 28px;
+      padding: 15px 28px;
       border-radius: 50px;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       display: inline-block;
       transition: all 0.3s ease;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.4px;
       text-transform: uppercase;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
+      cursor: pointer;
     }
 
     .btn-book {
-      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      background: linear-gradient(135deg, #ff6ab8, var(--primary-dark));
       color: #fff;
-      box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+      box-shadow: 0 12px 24px rgba(209, 0, 116, 0.28);
       border: none;
     }
 
     .btn-book:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 20, 147, 0.6);
+      box-shadow: 0 16px 28px rgba(209, 0, 116, 0.34);
     }
 
     .btn-call {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.78);
       color: var(--primary);
       border: 2px solid var(--primary);
     }
@@ -217,31 +241,91 @@
     }
 
     .section h2 {
-      font-size: 2em;
+      font-size: 2.15em;
       color: var(--primary);
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 18px;
       font-weight: 700;
-      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+      text-shadow: 0 2px 10px rgba(255, 255, 255, 0.72);
+    }
+
+    .promo-bar {
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: #fff;
+      text-align: center;
+      padding: 12px 16px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .hero-section {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 28px;
+      align-items: center;
+    }
+
+    .hero-copy {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .hero-copy h2 {
+      text-align: left;
+      font-size: clamp(2rem, 4vw, 3.55rem);
+      line-height: 1.06;
+      margin-bottom: 0;
+      text-shadow: none;
+    }
+
+    .hero-copy .eyebrow {
+      text-align: left;
+      margin-bottom: 0;
+    }
+
+    .hero-copy p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      margin: 0;
+    }
+
+    .hero-media {
+      position: relative;
     }
 
     .promo-banner {
-      margin-bottom: 25px;
+      margin-bottom: 0;
     }
 
     .promo-banner img {
       max-width: 100%;
       border-radius: var(--radius);
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 18px 40px rgba(43, 17, 37, 0.18);
       display: block;
       margin: 0 auto;
+      min-height: 420px;
+      object-fit: cover;
     }
 
     .booking-widget {
-      text-align: center;
-      background: rgba(255, 255, 255, 0.6);
-      /* Slightly more transparent inside section */
-      margin-top: 20px;
+      text-align: left;
+      background: rgba(255, 255, 255, 0.56);
+      margin-top: 4px;
+      padding: 28px;
     }
 
     .booking-widget .btn-book {
@@ -250,9 +334,9 @@
     }
 
     .fallback {
-      margin: 15px 0 5px;
+      margin: 14px 0 0;
       font-size: 0.95em;
-      color: #555;
+      color: var(--muted);
     }
 
     .fallback a {
@@ -266,9 +350,9 @@
       text-align: center;
       margin: 25px 0 0;
       padding: 20px;
-      background: rgba(255, 240, 245, 0.9);
-      border-radius: 12px;
-      border: 1px dashed var(--primary);
+      background: linear-gradient(180deg, rgba(255, 240, 245, 0.92), rgba(255, 246, 250, 0.92));
+      border-radius: 16px;
+      border: 1px solid rgba(255, 20, 147, 0.18);
     }
 
     .discount-link strong {
@@ -289,9 +373,9 @@
       width: 100%;
       border-collapse: separate;
       border-spacing: 0;
-      margin: 15px 0;
+      margin: 20px 0 0;
       background: rgba(255, 255, 255, 0.8);
-      border-radius: 12px;
+      border-radius: 18px;
       overflow: hidden;
     }
 
@@ -321,8 +405,8 @@
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
     }
 
     .gallery img {
@@ -330,7 +414,7 @@
       height: 250px;
       object-fit: cover;
       border-radius: var(--radius);
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 20px rgba(43, 17, 37, 0.12);
       transition: transform 0.3s ease;
     }
 
@@ -350,6 +434,8 @@
     .contact-info {
       text-align: center;
       font-size: 1.05em;
+      background: rgba(255, 255, 255, 0.56);
+      margin-top: 24px;
     }
 
     .contact-info p {
@@ -370,16 +456,101 @@
       color: var(--primary);
     }
 
+    .services-grid,
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .service-card,
+    .review-card {
+      background: rgba(255, 255, 255, 0.72);
+      border-radius: 18px;
+      padding: 24px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 12px 28px rgba(43, 17, 37, 0.08);
+    }
+
+    .service-card h3,
+    .review-card h3 {
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    .service-card p,
+    .review-card p {
+      margin: 0;
+    }
+
+    .service-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 32px rgba(43, 17, 37, 0.12);
+    }
+
+    .service-card .btn-book {
+      margin-top: 18px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .review-card {
+      position: relative;
+      padding-top: 36px;
+    }
+
+    .review-card::before {
+      content: "“";
+      position: absolute;
+      top: 6px;
+      left: 18px;
+      font-size: 3rem;
+      line-height: 1;
+      color: rgba(255, 20, 147, 0.22);
+      font-weight: 700;
+    }
+
+    .final-cta {
+      background: linear-gradient(180deg, rgba(255, 246, 250, 0.92), rgba(255, 252, 254, 0.84));
+    }
+
+    .route-link {
+      margin-top: 18px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section ul {
+      max-width: 760px;
+      margin: 20px auto 0;
+      padding-left: 20px;
+    }
+
+    .section li {
+      margin: 10px 0;
+    }
+
     .hidden {
-      display: none;
+      display: none !important;
     }
 
     @media (max-width: 768px) {
+      .container {
+        margin-top: 22px;
+        padding: 14px;
+      }
+
       .cta-bar {
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        padding: 25px 15px;
+        padding: 20px 15px;
       }
 
       .btn-book,
@@ -393,6 +564,20 @@
         padding: 20px;
       }
 
+      .hero-section {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-copy h2,
+      .hero-copy .eyebrow,
+      .booking-widget {
+        text-align: center;
+      }
+
+      .promo-banner img {
+        min-height: 300px;
+      }
+
       h1 {
         font-size: 1.2rem;
       }
@@ -401,11 +586,18 @@
 </head>
 
 <body>
+  <div class="promo-bar">
+    <div id="promo-de">10% Rabatt auf alle Behandlungen bis zum 31. Mai 2026</div>
+    <div id="promo-en" class="hidden">10% off all treatments until May 31, 2026</div>
+    <div id="promo-vi" class="hidden">Giảm 10% cho tất cả dịch vụ đến hết ngày 31/05/2026</div>
+  </div>
   <header>
     <img src="https://res.cloudinary.com/dutzxseaw/image/upload/v1760676605/Queen-03_mxp5vv.png" alt="Logo"
       class="logo">
     <h1>Queen Nails & Lashes</h1>
-    <p>Kramgasse 37, 3011 Bern</p>
+    <p id="header-address-de">Kramgasse 37, 3011 Bern</p>
+    <p id="header-address-en" class="hidden">Kramgasse 37, 3011 Bern</p>
+    <p id="header-address-vi" class="hidden">Kramgasse 37, 3011 Bern</p>
     <div class="language-selector">
       <button onclick="changeLanguage('de')" class="active">Deutsch</button>
       <button onclick="changeLanguage('en')">English</button>
@@ -413,98 +605,146 @@
     </div>
   </header>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8GM7MN6" height="0" width="0"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK2NX2GB" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="container">
     <!-- CTA Buttons -->
     <div class="cta-bar">
-      <a href="javascript:void(0)"
-        onclick="trackBookingClick('cta'); window.open('https://buchung.treatwell.ch/ort/queen-nails-and-lashes/', '_blank')"
-        class="btn-book">Termin buchen (10% Rabatt)</a>
-      <a href="tel:+41798050068" class="btn-call">Rufen Sie an: +41 79 805 00 68</a>
+      <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank" rel="noopener"
+        onclick="trackBookingClick('cta_de')"
+        class="btn-book" id="cta-book-de">Jetzt 10% sichern</a>
+      <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank" rel="noopener"
+        onclick="trackBookingClick('cta_en')"
+        class="btn-book hidden" id="cta-book-en">Claim 10% now</a>
+      <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank" rel="noopener"
+        onclick="trackBookingClick('cta_vi')"
+        class="btn-book hidden" id="cta-book-vi">Nhận ưu đãi 10%</a>
+
+      <a href="tel:+41798050068" class="btn-call" id="cta-call-de">Jetzt anrufen: +41 79 805 00 68</a>
+      <a href="tel:+41798050068" class="btn-call hidden" id="cta-call-en">Call now: +41 79 805 00 68</a>
+      <a href="tel:+41798050068" class="btn-call hidden" id="cta-call-vi">Gọi ngay: +41 79 805 00 68</a>
     </div>
 
     <!-- ==================== DEUTSCH ==================== -->
-    <div class="section" id="hero-de">
-      <div class="promo-banner">
-        <img
-          src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-          alt="10% Rabatt">
+    <div class="section hero-section" id="hero-de">
+      <div class="hero-copy">
+        <p class="eyebrow">Queen Nails &amp; Lashes in Bern</p>
+        <h2>10% Rabatt auf alle Behandlungen</h2>
+        <div class="booking-widget">
+          <p>
+            Buche jetzt deinen Termin bei Queen Nails &amp; Lashes in der Berner Altstadt.
+            Professionelle Nail-Behandlungen, präzise Ausführung und Online-Buchung in wenigen Klicks.
+            Angebot gültig bis zum 31. Mai 2026.
+          </p>
+          <a class="btn-book" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('hero_primary_de')">
+            Jetzt 10% sichern
+          </a>
+          <p class="fallback">
+            Oder direkt online buchen:
+            <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
+              target="_blank" rel="noopener" onclick="trackBookingClick('hero_secondary_de')">Jetzt Termin buchen</a>
+          </p>
+          <p class="fallback">
+            Zentral in Bern · Online buchen via Treatwell · Deutsch / English / Tiếng Việt
+          </p>
+        </div>
       </div>
-      <h2>Buchen Sie jetzt!</h2>
-      <div class="booking-widget">
-        <button class="btn-book"
-          onclick="trackBookingClick('main_button'); window.open('https://buchung.treatwell.ch/ort/queen-nails-and-lashes/', '_blank')">
-          Termin buchen bei Treatwell (10% Rabatt)
-        </button>
-        <p class="fallback">Oder direkt: <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
-            target="_blank" onclick="trackBookingClick('fallback')">Hier klicken</a></p>
-        <p class="fallback">Nach der Buchung: Öffnen Sie die E-Mail und klicken Sie auf den Bestätigungslink für Ihren
-          Rabatt.</p>
-      </div>
-      <div class="discount-link">
-        <strong>10% Rabatt auf die erste Behandlung:</strong><br>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('de_hero')">
-          https://buchung.treatwell.ch/ort/queen-nails-and-lashes/
-        </a>
+      <div class="hero-media">
+        <div class="promo-banner">
+          <img
+            src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
+            alt="10% Rabatt auf alle Behandlungen">
+        </div>
       </div>
     </div>
 
     <!-- ==================== ENGLISH ==================== -->
-    <div class="section hidden" id="hero-en">
-      <div class="promo-banner">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277655/IMG_4292_yijvhj.jpg" alt="10% Off">
+    <div class="section hero-section hidden" id="hero-en">
+      <div class="hero-copy">
+        <p class="eyebrow">Queen Nails &amp; Lashes in Bern</p>
+        <h2>10% off all treatments</h2>
+        <div class="booking-widget">
+          <p>
+            Book your appointment now at Queen Nails &amp; Lashes in Bern Old Town.
+            Professional nail treatments, precise work, and easy online booking in just a few clicks.
+            Offer valid until May 31, 2026.
+          </p>
+          <a class="btn-book" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('hero_primary_en')">
+            Claim 10% now
+          </a>
+          <p class="fallback">
+            Or book directly online:
+            <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
+              target="_blank" rel="noopener" onclick="trackBookingClick('hero_secondary_en')">Book now</a>
+          </p>
+          <p class="fallback">
+            Central Bern location · Online booking via Treatwell · German / English / Vietnamese
+          </p>
+        </div>
       </div>
-      <h2>Book Now!</h2>
-      <div class="booking-widget">
-        <button class="btn-book"
-          onclick="trackBookingClick('main_button'); window.open('https://buchung.treatwell.ch/ort/queen-nails-and-lashes/', '_blank')">
-          Book on Treatwell (10% Off)
-        </button>
-        <p class="fallback">Or directly: <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
-            target="_blank" onclick="trackBookingClick('fallback')">Click here</a></p>
-      </div>
-      <div class="discount-link">
-        <strong>10% Off on your first treatment:</strong><br>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('en_hero')">
-          https://buchung.treatwell.ch/ort/queen-nails-and-lashes/
-        </a>
+      <div class="hero-media">
+        <div class="promo-banner">
+          <img
+            src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
+            alt="10% off all treatments">
+        </div>
       </div>
     </div>
 
     <!-- ==================== TIẾNG VIỆT ==================== -->
-    <div class="section hidden" id="hero-vi">
-      <div class="promo-banner">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277655/IMG_4292_yijvhj.jpg" alt="10% Giảm">
+    <div class="section hero-section hidden" id="hero-vi">
+      <div class="hero-copy">
+        <p class="eyebrow">Queen Nails &amp; Lashes tại Bern</p>
+        <h2>Giảm 10% cho tất cả dịch vụ</h2>
+        <div class="booking-widget">
+          <p>
+            Đặt lịch ngay tại Queen Nails &amp; Lashes ở khu phố cổ Bern.
+            Dịch vụ nail chuyên nghiệp, làm kỹ, đẹp và đặt lịch online nhanh chóng chỉ trong vài bước.
+            Ưu đãi áp dụng đến hết ngày 31/05/2026.
+          </p>
+          <a class="btn-book" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('hero_primary_vi')">
+            Nhận ưu đãi 10%
+          </a>
+          <p class="fallback">
+            Hoặc đặt trực tiếp online:
+            <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
+              target="_blank" rel="noopener" onclick="trackBookingClick('hero_secondary_vi')">Đặt lịch ngay</a>
+          </p>
+          <p class="fallback">
+            Vị trí trung tâm Bern · Đặt lịch online qua Treatwell · Deutsch / English / Tiếng Việt
+          </p>
+        </div>
       </div>
-      <h2>Đặt Lịch Ngay!</h2>
-      <div class="booking-widget">
-        <button class="btn-book"
-          onclick="trackBookingClick('main_button'); window.open('https://buchung.treatwell.ch/ort/queen-nails-and-lashes/', '_blank')">
-          Đặt tại Treatwell (10% Giảm)
-        </button>
-        <p class="fallback">Hoặc trực tiếp: <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
-            target="_blank" onclick="trackBookingClick('fallback')">Nhấn đây</a></p>
-      </div>
-      <div class="discount-link">
-        <strong>10% Giảm cho lần điều trị đầu tiên:</strong><br>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('vi_hero')">
-          https://buchung.treatwell.ch/ort/queen-nails-and-lashes/
-        </a>
+      <div class="hero-media">
+        <div class="promo-banner">
+          <img
+            src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
+            alt="Giảm 10% tất cả dịch vụ">
+        </div>
       </div>
     </div>
 
     <!-- Preise / Prices -->
     <div class="section">
-      <h2 id="price-title-de">Unsere Preise</h2>
-      <h2 id="price-title-en" class="hidden">Our Prices</h2>
-      <h2 id="price-title-vi" class="hidden">Bảng Giá Dịch Vụ</h2>
+      <h2 id="price-title-de">Preise auf einen Blick</h2>
+      <h2 id="price-title-en" class="hidden">Prices at a Glance</h2>
+      <h2 id="price-title-vi" class="hidden">Bảng Giá Nổi Bật</h2>
 
-      <table>
+      <p id="price-intro-de">
+        Transparente Preise und 10% Rabatt auf alle Behandlungen bis zum 31. Mai 2026.
+      </p>
+      <p id="price-intro-en" class="hidden">
+        Clear pricing and 10% off all treatments until May 31, 2026.
+      </p>
+      <p id="price-intro-vi" class="hidden">
+        Giá rõ ràng và giảm 10% cho tất cả dịch vụ đến hết ngày 31/05/2026.
+      </p>
+
+      <table id="price-table-de">
         <tr>
           <th>Dienstleistung</th>
           <th>Preis (CHF)</th>
@@ -514,11 +754,11 @@
           <td>45</td>
         </tr>
         <tr>
-          <td>Gel-Nägel (Neuaufbau)</td>
+          <td>Gel-Nägel Neuauflage</td>
           <td>75</td>
         </tr>
         <tr>
-          <td>Gel-Nägel Auffüllen</td>
+          <td>Auffüllen</td>
           <td>65</td>
         </tr>
         <tr>
@@ -526,65 +766,316 @@
           <td>55</td>
         </tr>
         <tr>
-          <td>Wimpernverlängerung (Volumen)</td>
-          <td>120</td>
-        </tr>
-        <tr>
-          <td>Wimpernlifting</td>
-          <td>85</td>
-        </tr>
-        <tr>
-          <td>Augenbrauen Färben + Formen</td>
-          <td>35</td>
-        </tr>
-        <tr>
-          <td>Gesichtsbehandlung 60 min</td>
-          <td>90</td>
+          <td>Nail Art Design</td>
+          <td>auf Anfrage</td>
         </tr>
       </table>
 
-      <!-- Discount link dưới bảng giá - 3 ngôn ngữ -->
+      <table id="price-table-en" class="hidden">
+        <tr>
+          <th>Service</th>
+          <th>Price (CHF)</th>
+        </tr>
+        <tr>
+          <td>Classic Manicure</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Gel Nails New Set</td>
+          <td>75</td>
+        </tr>
+        <tr>
+          <td>Refill</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Classic Pedicure</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>Nail Art Design</td>
+          <td>on request</td>
+        </tr>
+      </table>
+
+      <table id="price-table-vi" class="hidden">
+        <tr>
+          <th>Dịch vụ</th>
+          <th>Giá (CHF)</th>
+        </tr>
+        <tr>
+          <td>Manicure Classic</td>
+          <td>45</td>
+        </tr>
+        <tr>
+          <td>Bộ Gel Mới</td>
+          <td>75</td>
+        </tr>
+        <tr>
+          <td>Dặm Gel</td>
+          <td>65</td>
+        </tr>
+        <tr>
+          <td>Pedicure Classic</td>
+          <td>55</td>
+        </tr>
+        <tr>
+          <td>Nail Art Design</td>
+          <td>liên hệ</td>
+        </tr>
+      </table>
+
       <div class="discount-link" id="discount-de">
-        <strong>10% Rabatt auf die erste Behandlung!</strong><br>
+        <strong>10% Rabatt auf alle Behandlungen bis zum 31. Mai 2026</strong><br>
         <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('de_price')">
-          https://buchung.treatwell.ch/ort/queen-nails-and-lashes/
-        </a>
+          onclick="trackBookingClick('de_price')">Jetzt Termin buchen</a>
       </div>
       <div class="discount-link hidden" id="discount-en">
-        <strong>10% Off on your first treatment!</strong><br>
+        <strong>10% off all treatments until May 31, 2026</strong><br>
         <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('en_price')">
-          https://buchung.treatwell.ch/ort/queen-nails-and-lashes/
-        </a>
+          onclick="trackBookingClick('en_price')">Book now</a>
       </div>
       <div class="discount-link hidden" id="discount-vi">
-        <strong>10% Giảm cho lần đầu tiên!</strong><br>
+        <strong>Giảm 10% cho tất cả dịch vụ đến hết ngày 31/05/2026</strong><br>
         <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('vi_price')">
-          https://buchung.treatwell.ch/ort/queen-nails-and-lashes/
-        </a>
+          onclick="trackBookingClick('vi_price')">Đặt lịch ngay</a>
       </div>
     </div>
 
-    <!-- Galerie -->
     <div class="section">
-      <h2>Unsere Arbeiten</h2>
-      <div class="gallery">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4289_e3a4r2.jpg" alt="Nails 1">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4288_brwwku.jpg" alt="Nails 2">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4358_gwrio1.jpg" alt="Lashes 1">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277656/IMG_4387_lzh0kn.jpg" alt="Lashes 2">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4357_u9xsvw.jpg" alt="Pedicure">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277656/IMG_4388_ottjac.jpg" alt="Facial">
+      <h2 id="services-title-de">Beliebte Behandlungen</h2>
+      <h2 id="services-title-en" class="hidden">Popular Treatments</h2>
+      <h2 id="services-title-vi" class="hidden">Dịch Vụ Được Yêu Thích</h2>
+
+      <p id="services-intro-de">
+        Entdecke unsere beliebtesten Nail-Behandlungen für gepflegte, stilvolle und langanhaltend schöne Nägel.
+      </p>
+      <p id="services-intro-en" class="hidden">
+        Discover our most popular nail treatments for clean, stylish and long-lasting results.
+      </p>
+      <p id="services-intro-vi" class="hidden">
+        Khám phá các dịch vụ nail được yêu thích nhất với kết quả đẹp, chỉn chu và bền lâu.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 id="service1-title-de">Gel-Nägel Neuauflage</h3>
+          <h3 id="service1-title-en" class="hidden">Gel Nails New Set</h3>
+          <h3 id="service1-title-vi" class="hidden">Bộ Gel Mới</h3>
+
+          <p id="service1-text-de">Perfekt modellierte Nägel mit gepflegtem, langanhaltendem Finish.</p>
+          <p id="service1-text-en" class="hidden">Perfectly shaped nails with a polished, long-lasting finish.</p>
+          <p id="service1-text-vi" class="hidden">Móng được tạo form đẹp, hoàn thiện chỉn chu và giữ lâu.</p>
+          <a class="btn-book" id="service1-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_1_de')">Jetzt buchen</a>
+          <a class="btn-book hidden" id="service1-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_1_en')">Book now</a>
+          <a class="btn-book hidden" id="service1-cta-vi" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_1_vi')">Đặt lịch ngay</a>
+        </div>
+
+        <div class="service-card">
+          <h3 id="service2-title-de">Auffüllen</h3>
+          <h3 id="service2-title-en" class="hidden">Refill</h3>
+          <h3 id="service2-title-vi" class="hidden">Dặm Gel</h3>
+
+          <p id="service2-text-de">Für frische, saubere Nägel mit stabilem Look und schönem Übergang.</p>
+          <p id="service2-text-en" class="hidden">For fresh, clean nails with a balanced shape and seamless finish.</p>
+          <p id="service2-text-vi" class="hidden">Giúp móng mới lại, sạch đẹp và đều form tự nhiên.</p>
+          <a class="btn-book" id="service2-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_2_de')">Jetzt buchen</a>
+          <a class="btn-book hidden" id="service2-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_2_en')">Book now</a>
+          <a class="btn-book hidden" id="service2-cta-vi" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_2_vi')">Đặt lịch ngay</a>
+        </div>
+
+        <div class="service-card">
+          <h3 id="service3-title-de">Maniküre Classic</h3>
+          <h3 id="service3-title-en" class="hidden">Classic Manicure</h3>
+          <h3 id="service3-title-vi" class="hidden">Manicure Classic</h3>
+
+          <p id="service3-text-de">Gepflegte Hände, saubere Nagelform und ein natürlich schöner Eindruck.</p>
+          <p id="service3-text-en" class="hidden">Well-groomed hands, clean nail shaping and a naturally polished look.</p>
+          <p id="service3-text-vi" class="hidden">Bàn tay gọn gàng, móng được làm sạch và tạo dáng đẹp tự nhiên.</p>
+          <a class="btn-book" id="service3-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_3_de')">Jetzt buchen</a>
+          <a class="btn-book hidden" id="service3-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_3_en')">Book now</a>
+          <a class="btn-book hidden" id="service3-cta-vi" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_3_vi')">Đặt lịch ngay</a>
+        </div>
+
+        <div class="service-card">
+          <h3 id="service4-title-de">Nail Art Design</h3>
+          <h3 id="service4-title-en" class="hidden">Nail Art Design</h3>
+          <h3 id="service4-title-vi" class="hidden">Thiết Kế Nail Art</h3>
+
+          <p id="service4-text-de">Individuelle Designs mit Liebe zum Detail, passend zu deinem Stil.</p>
+          <p id="service4-text-en" class="hidden">Custom designs with attention to detail, tailored to your personal style.</p>
+          <p id="service4-text-vi" class="hidden">Mẫu thiết kế riêng, chăm chút từng chi tiết và phù hợp phong cách của bạn.</p>
+          <a class="btn-book" id="service4-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_4_de')">Jetzt buchen</a>
+          <a class="btn-book hidden" id="service4-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_4_en')">Book now</a>
+          <a class="btn-book hidden" id="service4-cta-vi" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+            rel="noopener" onclick="trackBookingClick('service_4_vi')">Đặt lịch ngay</a>
+        </div>
       </div>
-      <p style="text-align:center; margin-top:15px;"><em>Mehr auf <a href="https://instagram.com/queennailsbern"
+    </div>
+
+    <div class="section final-cta">
+      <h2 id="gallery-title-de">Unsere Arbeiten</h2>
+      <h2 id="gallery-title-en" class="hidden">Our Work</h2>
+      <h2 id="gallery-title-vi" class="hidden">Các Mẫu Nail Của Tiệm</h2>
+
+      <p id="gallery-intro-de" style="text-align:center; margin-bottom:20px;">
+        Entdecke echte Ergebnisse aus unserem Studio in Bern. Sauber gearbeitet, stilvoll umgesetzt und auf deinen Look abgestimmt.
+      </p>
+      <p id="gallery-intro-en" class="hidden" style="text-align:center; margin-bottom:20px;">
+        Explore real results from our studio in Bern. Clean work, stylish finishes and looks tailored to you.
+      </p>
+      <p id="gallery-intro-vi" class="hidden" style="text-align:center; margin-bottom:20px;">
+        Khám phá những mẫu thật từ tiệm tại Bern. Làm kỹ, đẹp và phù hợp với phong cách của bạn.
+      </p>
+
+      <div class="gallery">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4289_e3a4r2.jpg" alt="French Nails">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4288_brwwku.jpg" alt="Glossy Nude Nails">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4357_u9xsvw.jpg" alt="Pedicure">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277655/IMG_4292_yijvhj.jpg" alt="Elegant Pink Nails">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4358_gwrio1.jpg" alt="Modern Design Nails">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277656/IMG_4387_lzh0kn.jpg" alt="Classic Finish Nails">
+      </div>
+
+      <p id="gallery-link-de" style="text-align:center; margin-top:15px;"><em>Mehr Inspiration auf <a href="https://instagram.com/queennailsbern"
+            target="_blank">Instagram</a></em></p>
+      <p id="gallery-link-en" class="hidden" style="text-align:center; margin-top:15px;"><em>More inspiration on <a href="https://instagram.com/queennailsbern"
+            target="_blank">Instagram</a></em></p>
+      <p id="gallery-link-vi" class="hidden" style="text-align:center; margin-top:15px;"><em>Xem thêm mẫu trên <a href="https://instagram.com/queennailsbern"
             target="_blank">Instagram</a></em></p>
     </div>
 
-    <!-- Map + Kontakt -->
     <div class="section">
-      <h2>So finden Sie uns</h2>
+      <h2 id="why-title-de">Warum Kundinnen Queen Nails wählen</h2>
+      <h2 id="why-title-en" class="hidden">Why Clients Choose Queen Nails</h2>
+      <h2 id="why-title-vi" class="hidden">Vì Sao Khách Hàng Chọn Queen Nails</h2>
+
+      <p id="why-intro-de" style="text-align:center; margin-bottom:20px;">
+        Bei uns geht es nicht nur um schöne Nägel, sondern um ein gepflegtes Ergebnis, das zu dir passt und lange Freude macht.
+      </p>
+      <p id="why-intro-en" class="hidden" style="text-align:center; margin-bottom:20px;">
+        It is not just about beautiful nails, but about clean, polished results that suit you and last beautifully.
+      </p>
+      <p id="why-intro-vi" class="hidden" style="text-align:center; margin-bottom:20px;">
+        Không chỉ là làm móng đẹp, mà là mang đến kết quả chỉn chu, hợp với bạn và giữ đẹp lâu hơn.
+      </p>
+
+      <ul id="why-list-de">
+        <li>Zentrale Lage in der Berner Altstadt</li>
+        <li>Präzise und saubere Arbeit</li>
+        <li>Mehrsprachiger Service</li>
+        <li>Online-Terminbuchung in wenigen Klicks</li>
+      </ul>
+      <ul id="why-list-en" class="hidden">
+        <li>Central location in Bern Old Town</li>
+        <li>Precise and clean work</li>
+        <li>Multilingual service</li>
+        <li>Easy online booking in just a few clicks</li>
+      </ul>
+      <ul id="why-list-vi" class="hidden">
+        <li>Vị trí trung tâm tại phố cổ Bern</li>
+        <li>Làm kỹ, sạch và chỉn chu</li>
+        <li>Hỗ trợ nhiều ngôn ngữ</li>
+        <li>Đặt lịch online nhanh chóng</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 id="reviews-title-de">Das sagen unsere Kundinnen</h2>
+      <h2 id="reviews-title-en" class="hidden">What Our Clients Say</h2>
+      <h2 id="reviews-title-vi" class="hidden">Khách Hàng Nói Gì Về Queen Nails</h2>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <p id="review1-de">„Sehr schöne und saubere Arbeit. Ich habe mich sofort wohlgefühlt und bin mit dem Ergebnis sehr zufrieden.“</p>
+          <p id="review1-en" class="hidden">“Very beautiful and clean work. I felt comfortable right away and was very happy with the result.”</p>
+          <p id="review1-vi" class="hidden">“Làm rất đẹp và sạch. Mình cảm thấy rất thoải mái và cực kỳ hài lòng với kết quả.”</p>
+        </div>
+
+        <div class="review-card">
+          <p id="review2-de">„Tolle Lage in Bern, einfache Buchung und ein sehr angenehmer Service. Ich komme gerne wieder.“</p>
+          <p id="review2-en" class="hidden">“Great location in Bern, easy booking and a very pleasant service. I will gladly come back.”</p>
+          <p id="review2-vi" class="hidden">“Vị trí rất thuận tiện ở Bern, đặt lịch dễ và dịch vụ rất dễ chịu. Mình sẽ quay lại.”</p>
+        </div>
+
+        <div class="review-card">
+          <p id="review3-de">„Meine Nägel sehen wunderschön aus und halten super. Präzise Arbeit und freundliche Beratung.“</p>
+          <p id="review3-en" class="hidden">“My nails look beautiful and last really well. Precise work and friendly advice.”</p>
+          <p id="review3-vi" class="hidden">“Móng lên rất đẹp và giữ rất tốt. Làm kỹ và tư vấn thân thiện.”</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 id="faq-title-de">Häufige Fragen</h2>
+      <h2 id="faq-title-en" class="hidden">Frequently Asked Questions</h2>
+      <h2 id="faq-title-vi" class="hidden">Câu Hỏi Thường Gặp</h2>
+
+      <div id="faq-de">
+        <p><strong>Wie buche ich meinen Termin?</strong><br>Du kannst deinen Termin ganz einfach online über Treatwell buchen. Klicke einfach auf „Jetzt 10% sichern“ und wähle deine gewünschte Behandlung.</p>
+        <p><strong>Gilt der 10%-Rabatt für alle Behandlungen?</strong><br>Ja. Der 10%-Rabatt gilt für alle Behandlungen und ist bis zum 31. Mai 2026 verfügbar.</p>
+        <p><strong>Wo befindet sich das Studio?</strong><br>Du findest Queen Nails &amp; Lashes an der Kramgasse 37, 3011 Bern, zentral in der Berner Altstadt.</p>
+        <p><strong>Welche Sprachen werden gesprochen?</strong><br>Wir beraten dich gerne auf Deutsch, Englisch oder Vietnamesisch.</p>
+      </div>
+
+      <div id="faq-en" class="hidden">
+        <p><strong>How do I book my appointment?</strong><br>You can easily book online via Treatwell. Just click “Claim 10% now” and choose your preferred treatment.</p>
+        <p><strong>Does the 10% discount apply to all treatments?</strong><br>Yes. The 10% discount applies to all treatments until May 31, 2026.</p>
+        <p><strong>Where is the studio located?</strong><br>You can find Queen Nails &amp; Lashes at Kramgasse 37, 3011 Bern, in the heart of Bern Old Town.</p>
+        <p><strong>Which languages do you speak?</strong><br>We are happy to assist you in German, English or Vietnamese.</p>
+      </div>
+
+      <div id="faq-vi" class="hidden">
+        <p><strong>Làm sao để đặt lịch?</strong><br>Bạn có thể đặt lịch online rất dễ qua Treatwell. Chỉ cần bấm “Nhận ưu đãi 10%” và chọn dịch vụ mong muốn.</p>
+        <p><strong>Ưu đãi 10% áp dụng cho tất cả dịch vụ chứ?</strong><br>Có. Ưu đãi 10% áp dụng cho tất cả dịch vụ đến hết ngày 31/05/2026.</p>
+        <p><strong>Tiệm ở đâu?</strong><br>Queen Nails &amp; Lashes nằm tại Kramgasse 37, 3011 Bern, ngay trung tâm khu phố cổ Bern.</p>
+        <p><strong>Tiệm hỗ trợ ngôn ngữ nào?</strong><br>Chúng tôi hỗ trợ bằng tiếng Đức, tiếng Anh và tiếng Việt.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 id="final-cta-title-de">Sichere dir jetzt 10% auf alle Behandlungen</h2>
+      <h2 id="final-cta-title-en" class="hidden">Get 10% off all treatments now</h2>
+      <h2 id="final-cta-title-vi" class="hidden">Nhận ngay ưu đãi 10% cho tất cả dịch vụ</h2>
+
+      <p id="final-cta-text-de" style="text-align:center; margin-bottom:20px;">
+        Angebot gültig bis zum 31. Mai 2026. Buche jetzt deinen Termin online oder ruf uns direkt an.
+      </p>
+      <p id="final-cta-text-en" class="hidden" style="text-align:center; margin-bottom:20px;">
+        Offer valid until May 31, 2026. Book your appointment online now or call us directly.
+      </p>
+      <p id="final-cta-text-vi" class="hidden" style="text-align:center; margin-bottom:20px;">
+        Ưu đãi áp dụng đến hết ngày 31/05/2026. Đặt lịch online ngay hoặc gọi trực tiếp cho tiệm.
+      </p>
+
+      <div class="cta-bar">
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('final_cta_booking')" class="btn-book" id="final-book-de">Jetzt Termin buchen</a>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('final_cta_booking')" class="btn-book hidden" id="final-book-en">Book now</a>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('final_cta_booking')" class="btn-book hidden" id="final-book-vi">Đặt lịch ngay</a>
+
+        <a href="tel:+41798050068" class="btn-call" id="final-call-de">Jetzt anrufen</a>
+        <a href="tel:+41798050068" class="btn-call hidden" id="final-call-en">Call now</a>
+        <a href="tel:+41798050068" class="btn-call hidden" id="final-call-vi">Gọi ngay</a>
+      </div>
+
+      <h3 id="contact-title-de">So findest du uns</h3>
+      <h3 id="contact-title-en" class="hidden">Find Us</h3>
+      <h3 id="contact-title-vi" class="hidden">Thông Tin Liên Hệ</h3>
+
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2723.7069105321416!2d7.447765676550413!3d46.94779923323815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478e39175794629d%3A0xc59c19b668336eb2!2sQueen%20Nails%20and%20Lashes!5e0!3m2!1svi!2s!4v1762156212130!5m2!1svi!2s"
@@ -592,13 +1083,39 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="contact-info">
-        <p><strong>Adresse:</strong> Kramgasse 37, 3011 Bern</p>
-        <p><strong>Telefon:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
-        <p><strong>E-Mail:</strong> <a href="mailto:queenailsbern@gmail.com">queenailsbern@gmail.com</a></p>
-        <p><strong>Öffnungszeiten:</strong><br>
+        <p id="contact-address-de"><strong>Adresse:</strong> Kramgasse 37, 3011 Bern</p>
+        <p id="contact-address-en" class="hidden"><strong>Address:</strong> Kramgasse 37, 3011 Bern</p>
+        <p id="contact-address-vi" class="hidden"><strong>Địa chỉ:</strong> Kramgasse 37, 3011 Bern</p>
+
+        <p id="contact-phone-de"><strong>Telefon:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
+        <p id="contact-phone-en" class="hidden"><strong>Phone:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
+        <p id="contact-phone-vi" class="hidden"><strong>Điện thoại:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
+
+        <p id="contact-hours-de"><strong>Öffnungszeiten:</strong><br>
           Mo–Fr: 09:00–19:00<br>
           Sa: 09:00–17:00<br>
           So: Geschlossen
+        </p>
+        <p id="contact-hours-en" class="hidden"><strong>Opening hours:</strong><br>
+          Mon–Fri: 09:00–19:00<br>
+          Sat: 09:00–17:00<br>
+          Sun: Closed
+        </p>
+        <p id="contact-hours-vi" class="hidden"><strong>Giờ mở cửa:</strong><br>
+          Thứ 2–Thứ 6: 09:00–19:00<br>
+          Thứ 7: 09:00–17:00<br>
+          Chủ nhật: Đóng cửa
+        </p>
+        <p>
+          <a id="route-link-de" class="btn-call route-link" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/dir/?api=1&destination=Kramgasse+37,+3011+Bern"
+            onclick="trackRouteClick('route_de')">Route öffnen</a>
+          <a id="route-link-en" class="btn-call route-link hidden" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/dir/?api=1&destination=Kramgasse+37,+3011+Bern"
+            onclick="trackRouteClick('route_en')">Open route</a>
+          <a id="route-link-vi" class="btn-call route-link hidden" target="_blank" rel="noopener"
+            href="https://www.google.com/maps/dir/?api=1&destination=Kramgasse+37,+3011+Bern"
+            onclick="trackRouteClick('route_vi')">Mở chỉ đường</a>
         </p>
       </div>
     </div>
@@ -606,50 +1123,152 @@
 
   <!-- TRACKING JS -->
   <script>
-    function trackBookingClick(source) {
-      const isFromGBP = document.referrer.includes('google');
+    const OFFER_ID = '10_percent_all_treatments_until_2026_05_31';
+    const PAGE_NAME = 'queen_nails_google_ads_lp';
+    const TRACKED_SCROLLS = new Set();
+
+    function getCurrentLanguage() {
+      const visibleHero = document.querySelector('[id^="hero-"]:not(.hidden)');
+      return visibleHero ? visibleHero.id.replace('hero-', '') : 'de';
+    }
+
+    function pushTrackingEvent(eventName, payload = {}) {
+      window.dataLayer = window.dataLayer || [];
       dataLayer.push({
-        event: isFromGBP ? 'booking_gbp_click' : 'booking_website_click',
-        source: source,
-        destination: 'treatwell'
+        event: eventName,
+        page_name: PAGE_NAME,
+        offer_id: OFFER_ID,
+        language_code: getCurrentLanguage(),
+        ...payload
       });
     }
 
-    // Event snippet for Book appointment
-    gtag('event', 'conversion', {
-      'send_to': 'AW-17696745463/TP0-CKyp9bobEPfPu_ZB',
-      'value': 1.0,
-      'currency': 'VND'
-    });
+    function trackBookingClick(ctaId) {
+      pushTrackingEvent('booking_cta_click', {
+        cta_id: ctaId,
+        cta_type: 'booking',
+        destination_platform: 'treatwell',
+        destination_url: 'https://buchung.treatwell.ch/ort/queen-nails-and-lashes/'
+      });
+    }
+
+    function trackPhoneClick(ctaId) {
+      pushTrackingEvent('phone_cta_click', {
+        cta_id: ctaId,
+        cta_type: 'phone',
+        phone_number: '+41798050068',
+        contact_method: 'tel'
+      });
+    }
+
+    function trackRouteClick(ctaId) {
+      pushTrackingEvent('route_cta_click', {
+        cta_id: ctaId,
+        cta_type: 'route',
+        destination_platform: 'google_maps',
+        destination_url: 'https://www.google.com/maps/dir/?api=1&destination=Kramgasse+37,+3011+Bern'
+      });
+    }
+
+    function trackScrollMilestone(depth) {
+      if (TRACKED_SCROLLS.has(depth)) return;
+      TRACKED_SCROLLS.add(depth);
+      pushTrackingEvent('scroll_milestone', { scroll_percent: depth });
+    }
 
     // Language switch
     function changeLanguage(lang) {
-      // Hero sections
-      document.querySelectorAll('#hero-de, #hero-en, #hero-vi').forEach(el => el.classList.add('hidden'));
-      document.getElementById(`hero-${lang}`).classList.remove('hidden');
+      const groups = [
+        ['promo'],
+        ['header-address'],
+        ['cta-book'],
+        ['cta-call'],
+        ['hero'],
+        ['price-title'],
+        ['price-intro'],
+        ['price-table'],
+        ['discount'],
+        ['services-title'],
+        ['services-intro'],
+        ['service1-title'],
+        ['service1-text'],
+        ['service1-cta'],
+        ['service2-title'],
+        ['service2-text'],
+        ['service2-cta'],
+        ['service3-title'],
+        ['service3-text'],
+        ['service3-cta'],
+        ['service4-title'],
+        ['service4-text'],
+        ['service4-cta'],
+        ['gallery-title'],
+        ['gallery-intro'],
+        ['gallery-link'],
+        ['why-title'],
+        ['why-intro'],
+        ['why-list'],
+        ['reviews-title'],
+        ['review1'],
+        ['review2'],
+        ['review3'],
+        ['faq-title'],
+        ['faq'],
+        ['final-cta-title'],
+        ['final-cta-text'],
+        ['final-book'],
+        ['final-call'],
+        ['contact-title'],
+        ['contact-address'],
+        ['contact-phone'],
+        ['contact-hours'],
+        ['route-link']
+      ];
 
-      // Price title
-      document.getElementById('price-title-de').classList.add('hidden');
-      document.getElementById('price-title-en').classList.add('hidden');
-      document.getElementById('price-title-vi').classList.add('hidden');
-      document.getElementById(`price-title-${lang}`).classList.remove('hidden');
-
-      // Discount under price table
-      document.getElementById('discount-de').classList.add('hidden');
-      document.getElementById('discount-en').classList.add('hidden');
-      document.getElementById('discount-vi').classList.add('hidden');
-      document.getElementById(`discount-${lang}`).classList.remove('hidden');
+      groups.forEach(([prefix]) => {
+        ['de', 'en', 'vi'].forEach(code => {
+          const el = document.getElementById(`${prefix}-${code}`);
+          if (el) el.classList.add('hidden');
+        });
+        const active = document.getElementById(`${prefix}-${lang}`);
+        if (active) active.classList.remove('hidden');
+      });
 
       // Buttons active state
       document.querySelectorAll('.language-selector button').forEach(b => b.classList.remove('active'));
       document.querySelector(`[onclick="changeLanguage('${lang}')"]`).classList.add('active');
+      document.documentElement.lang = lang;
+      localStorage.setItem('qn_lang', lang);
     }
 
-    // Auto-track phone clicks
-    document.addEventListener('click', function (e) {
-      if (e.target.closest('a[href^="tel:"]')) {
-        dataLayer.push({ event: 'phone_call' });
+    document.addEventListener('DOMContentLoaded', function () {
+      const savedLang = localStorage.getItem('qn_lang');
+      if (savedLang && ['de', 'en', 'vi'].includes(savedLang)) {
+        changeLanguage(savedLang);
+      } else {
+        document.documentElement.lang = 'de';
       }
+
+      pushTrackingEvent('landing_page_view', {
+        page_title: document.title,
+        path: location.pathname
+      });
+    });
+
+    document.addEventListener('click', function (e) {
+      const telLink = e.target.closest('a[href^="tel:"]');
+      if (telLink) {
+        trackPhoneClick(telLink.id || 'tel_link');
+      }
+    });
+
+    window.addEventListener('scroll', function () {
+      const doc = document.documentElement;
+      const scrollable = doc.scrollHeight - window.innerHeight;
+      if (scrollable <= 0) return;
+      const depth = (window.scrollY / scrollable) * 100;
+      if (depth >= 50) trackScrollMilestone(50);
+      if (depth >= 90) trackScrollMilestone(90);
     });
   </script>
 </body>
