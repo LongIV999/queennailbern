@@ -5,7 +5,7 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <title>Queen Nails & Lashes – Kramgasse 37, 3011 Bern</title>
-    <meta name="description" content="Queen Nails & Lashes Bern - Professionelle Maniküre, Pediküre & Wimpernverlängerung. 10% Rabatt auf Ihre erste Behandlung!">
+    <meta name="description" content="Queen Nails & Lashes Bern - Professionelle Maniküre, Pediküre & Wimpernverlängerung. 10% Rabatt auf alle Behandlungen bis zum 30. Juni 2026!">
     <meta name="keywords" content="Nagelstudio Bern, Queen Nails, Wimpernverlängerung, Maniküre, Pediküre, Treatwell">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
