@@ -15,17 +15,17 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Queen Nails & Lashes Bern | Nagelstudio & Wimpern | 10% Rabatt</title>
+  <title>Queen Nails & Lashes Bern | Nagelstudio in Bern | 10% Rabatt bei der ersten Treatwell-Buchung</title>
   <meta name="description"
-    content="Professionelle Nail-Behandlungen in Bern. Jetzt online buchen via Treatwell und 10% Rabatt auf alle Behandlungen bis zum 30. Juni 2026 sichern.">
+    content="Nagelstudio in Bern für Manicure, Pedicure, Acryl, Gel und Wimpern. 10% Rabatt bei der ersten Online-Buchung über Treatwell bis zum 30. Juni 2026.">
   <meta name="keywords"
     content="Queen Nails Bern, Nagelstudio Bern, Wimpern Bern, Treatwell, Maniküre, Lash Extensions">
 
   <!-- Open Graph -->
   <meta property="og:site_name" content="Queen Nails & Lashes Bern">
-  <meta property="og:title" content="Queen Nails & Lashes Bern | Nagelstudio & Wimpern | 10% Rabatt">
+  <meta property="og:title" content="Queen Nails & Lashes Bern | Nagelstudio in Bern | 10% Rabatt bei der ersten Treatwell-Buchung">
   <meta property="og:description"
-    content="Professionelle Nail-Behandlungen in Bern. Jetzt online buchen via Treatwell und 10% Rabatt auf alle Behandlungen bis zum 30. Juni 2026 sichern.">
+    content="Nagelstudio in Bern für Manicure, Pedicure, Acryl, Gel und Wimpern. 10% Rabatt bei der ersten Online-Buchung über Treatwell bis zum 30. Juni 2026.">
   <meta property="og:image" content="https://res.cloudinary.com/dutzxseaw/image/upload/v1760676605/Queen-03_mxp5vv.png">
   <meta property="og:url" content="https://queennailsbern.com">
   <meta property="og:type" content="website">
@@ -519,6 +519,111 @@
       background: linear-gradient(180deg, rgba(255, 246, 250, 0.92), rgba(255, 252, 254, 0.84));
     }
 
+    .section-intro {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--muted);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 4px 0 6px;
+    }
+
+    .hero-points span,
+    .kicker-card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 16px;
+      padding: 12px 14px;
+      color: var(--ink);
+      font-size: 0.92rem;
+      box-shadow: 0 10px 24px rgba(43, 17, 37, 0.06);
+    }
+
+    .mini-note {
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .kicker-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+      list-style: none;
+      padding: 0;
+    }
+
+    .kicker-card strong {
+      display: block;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .price-panel {
+      margin-top: 24px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .price-row {
+      display: grid;
+      grid-template-columns: minmax(110px, 150px) minmax(0, 1fr) 110px 90px;
+      gap: 12px;
+      align-items: center;
+      padding: 16px 18px;
+      background: rgba(255, 255, 255, 0.78);
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 10px 26px rgba(43, 17, 37, 0.07);
+    }
+
+    .price-row strong {
+      color: var(--primary-dark);
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .price-row span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .price-row p {
+      margin: 0;
+    }
+
+    .price-row em {
+      color: var(--ink);
+      font-style: normal;
+      font-weight: 600;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .service-card .meta {
+      display: block;
+      margin-top: 12px;
+      color: var(--primary-dark);
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .seo-copy {
+      max-width: 860px;
+      margin: 0 auto;
+      text-align: center;
+      color: var(--muted);
+    }
+
     .route-link {
       margin-top: 18px;
       display: inline-flex;
@@ -574,6 +679,37 @@
         text-align: center;
       }
 
+      .hero-points,
+      .kicker-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .price-row {
+        grid-template-columns: minmax(88px, 110px) minmax(0, 1fr);
+        grid-template-areas:
+          "category price"
+          "service duration";
+        gap: 8px 12px;
+        align-items: start;
+      }
+
+      .price-row strong {
+        grid-area: category;
+      }
+
+      .price-row p {
+        grid-area: service;
+      }
+
+      .price-row span {
+        grid-area: duration;
+      }
+
+      .price-row em {
+        grid-area: price;
+        text-align: right;
+      }
+
       .promo-banner img {
         min-height: 300px;
       }
@@ -587,9 +723,9 @@
 
 <body>
   <div class="promo-bar">
-    <div id="promo-de">10% Rabatt auf alle Behandlungen bis zum 30. Juni 2026</div>
-    <div id="promo-en" class="hidden">10% off all treatments until June 30, 2026</div>
-    <div id="promo-vi" class="hidden">Giảm 10% cho tất cả dịch vụ đến hết ngày 30/06/2026</div>
+    <div id="promo-de">10% Rabatt bei der ersten Online-Buchung über Treatwell bis zum 30. Juni 2026</div>
+    <div id="promo-en" class="hidden">10% off on your first online booking via Treatwell until June 30, 2026</div>
+    <div id="promo-vi" class="hidden">Giảm 10% cho khách đặt lịch online lần đầu qua Treatwell đến hết ngày 30/06/2026</div>
   </div>
   <header>
     <img src="https://res.cloudinary.com/dutzxseaw/image/upload/v1760676605/Queen-03_mxp5vv.png" alt="Logo"
@@ -609,263 +745,137 @@
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <div class="container">
-    <!-- CTA Buttons -->
     <div class="cta-bar">
       <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank" rel="noopener"
         onclick="trackBookingClick('cta_de')"
-        class="btn-book" id="cta-book-de">Jetzt 10% sichern</a>
+        class="btn-book" id="cta-book-de">Online über Treatwell buchen</a>
       <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank" rel="noopener"
         onclick="trackBookingClick('cta_en')"
-        class="btn-book hidden" id="cta-book-en">Claim 10% now</a>
+        class="btn-book hidden" id="cta-book-en">Book online via Treatwell</a>
       <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank" rel="noopener"
         onclick="trackBookingClick('cta_vi')"
-        class="btn-book hidden" id="cta-book-vi">Nhận ưu đãi 10%</a>
+        class="btn-book hidden" id="cta-book-vi">Đặt lịch online qua Treatwell</a>
 
       <a href="tel:+41798050068" class="btn-call" id="cta-call-de">Jetzt anrufen: +41 79 805 00 68</a>
       <a href="tel:+41798050068" class="btn-call hidden" id="cta-call-en">Call now: +41 79 805 00 68</a>
       <a href="tel:+41798050068" class="btn-call hidden" id="cta-call-vi">Gọi ngay: +41 79 805 00 68</a>
     </div>
 
-    <!-- ==================== DEUTSCH ==================== -->
     <div class="section hero-section" id="hero-de">
       <div class="hero-copy">
-        <p class="eyebrow">Queen Nails &amp; Lashes in Bern</p>
-        <h2>10% Rabatt auf alle Behandlungen</h2>
+        <p class="eyebrow">Nagelstudio in Bern</p>
+        <h2>Manicure, Pedicure &amp; Acryl/Gel im Herzen von Bern</h2>
         <div class="booking-widget">
           <p>
-            Buche jetzt deinen Termin bei Queen Nails &amp; Lashes in der Berner Altstadt.
-            Professionelle Nail-Behandlungen, präzise Ausführung und Online-Buchung in wenigen Klicks.
-            Angebot gültig bis zum 30. Juni 2026.
+            Queen Nails &amp; Lashes an der Kramgasse 37 ist dein Nagelstudio in der Berner Altstadt.
+            Buche online über Treatwell und sichere dir 10% Rabatt auf deine erste Online-Buchung bis zum 30. Juni 2026.
           </p>
+          <div class="hero-points">
+            <span>Zentral in Bern</span>
+            <span>Online via Treatwell</span>
+            <span>Deutsch / English / Tiếng Việt</span>
+          </div>
           <a class="btn-book" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('hero_primary_de')">
-            Jetzt 10% sichern
+            Erste Treatwell-Buchung mit 10% Rabatt
           </a>
-          <p class="fallback">
-            Oder direkt online buchen:
-            <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
-              target="_blank" rel="noopener" onclick="trackBookingClick('hero_secondary_de')">Jetzt Termin buchen</a>
-          </p>
-          <p class="fallback">
-            Zentral in Bern · Online buchen via Treatwell · Deutsch / English / Tiếng Việt
-          </p>
+          <p class="mini-note">Für Google-Ads-Traffic und lokale Suche optimiert: schnell buchen, Standort sehen, Behandlung wählen.</p>
         </div>
       </div>
       <div class="hero-media">
         <div class="promo-banner">
           <img
             src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-            alt="10% Rabatt auf alle Behandlungen">
+            alt="Nagelstudio Bern mit Manicure, Pedicure und Acryl Gel">
         </div>
       </div>
     </div>
 
-    <!-- ==================== ENGLISH ==================== -->
     <div class="section hero-section hidden" id="hero-en">
       <div class="hero-copy">
-        <p class="eyebrow">Queen Nails &amp; Lashes in Bern</p>
-        <h2>10% off all treatments</h2>
+        <p class="eyebrow">Nail salon in Bern</p>
+        <h2>Manicure, Pedicure &amp; Acryl/Gel in the heart of Bern</h2>
         <div class="booking-widget">
           <p>
-            Book your appointment now at Queen Nails &amp; Lashes in Bern Old Town.
-            Professional nail treatments, precise work, and easy online booking in just a few clicks.
-            Offer valid until June 30, 2026.
+            Queen Nails &amp; Lashes at Kramgasse 37 is your nail salon in Bern Old Town.
+            Book online via Treatwell and get 10% off your first online booking until June 30, 2026.
           </p>
+          <div class="hero-points">
+            <span>Central Bern</span>
+            <span>Book via Treatwell</span>
+            <span>German / English / Vietnamese</span>
+          </div>
           <a class="btn-book" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('hero_primary_en')">
-            Claim 10% now
+            Get 10% on your first Treatwell booking
           </a>
-          <p class="fallback">
-            Or book directly online:
-            <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
-              target="_blank" rel="noopener" onclick="trackBookingClick('hero_secondary_en')">Book now</a>
-          </p>
-          <p class="fallback">
-            Central Bern location · Online booking via Treatwell · German / English / Vietnamese
-          </p>
+          <p class="mini-note">Built for local search and Google Ads: quick service overview, clear location, fast booking.</p>
         </div>
       </div>
       <div class="hero-media">
         <div class="promo-banner">
           <img
             src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-            alt="10% off all treatments">
+            alt="Bern nail salon for manicure pedicure acrylic gel">
         </div>
       </div>
     </div>
 
-    <!-- ==================== TIẾNG VIỆT ==================== -->
     <div class="section hero-section hidden" id="hero-vi">
       <div class="hero-copy">
-        <p class="eyebrow">Queen Nails &amp; Lashes tại Bern</p>
-        <h2>Giảm 10% cho tất cả dịch vụ</h2>
+        <p class="eyebrow">Tiệm nail tại Bern</p>
+        <h2>Manicure, Pedicure &amp; Acryl/Gel ngay trung tâm Bern</h2>
         <div class="booking-widget">
           <p>
-            Đặt lịch ngay tại Queen Nails &amp; Lashes ở khu phố cổ Bern.
-            Dịch vụ nail chuyên nghiệp, làm kỹ, đẹp và đặt lịch online nhanh chóng chỉ trong vài bước.
-            Ưu đãi áp dụng đến hết ngày 30/06/2026.
+            Queen Nails &amp; Lashes tại Kramgasse 37 là tiệm nail ở khu phố cổ Bern.
+            Đặt lịch online qua Treatwell và nhận giảm 10% cho lần đặt online đầu tiên đến hết ngày 30/06/2026.
           </p>
+          <div class="hero-points">
+            <span>Ngay trung tâm Bern</span>
+            <span>Đặt lịch qua Treatwell</span>
+            <span>Deutsch / English / Tiếng Việt</span>
+          </div>
           <a class="btn-book" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('hero_primary_vi')">
-            Nhận ưu đãi 10%
+            Đặt Treatwell lần đầu giảm 10%
           </a>
-          <p class="fallback">
-            Hoặc đặt trực tiếp online:
-            <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/"
-              target="_blank" rel="noopener" onclick="trackBookingClick('hero_secondary_vi')">Đặt lịch ngay</a>
-          </p>
-          <p class="fallback">
-            Vị trí trung tâm Bern · Đặt lịch online qua Treatwell · Deutsch / English / Tiếng Việt
-          </p>
+          <p class="mini-note">Trang được làm ngắn gọn để khách từ Google Ads dễ xem dịch vụ, giá và đặt lịch nhanh.</p>
         </div>
       </div>
       <div class="hero-media">
         <div class="promo-banner">
           <img
             src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-            alt="Giảm 10% tất cả dịch vụ">
+            alt="Tiệm nail Bern với manicure pedicure acrylic gel">
         </div>
       </div>
     </div>
 
-    <!-- Preise / Prices -->
     <div class="section">
-      <h2 id="price-title-de">Preise auf einen Blick</h2>
-      <h2 id="price-title-en" class="hidden">Prices at a Glance</h2>
-      <h2 id="price-title-vi" class="hidden">Bảng Giá Nổi Bật</h2>
+      <h2 id="services-title-de">Beliebte Nail-Behandlungen in Bern</h2>
+      <h2 id="services-title-en" class="hidden">Popular Nail Services in Bern</h2>
+      <h2 id="services-title-vi" class="hidden">Dịch Vụ Nail Nổi Bật Tại Bern</h2>
 
-      <p id="price-intro-de">
-        Transparente Preise und 10% Rabatt auf alle Behandlungen bis zum 30. Juni 2026.
+      <p id="services-intro-de" class="section-intro">
+        Die wichtigsten Nail-Services stehen direkt am Anfang. So sehen Besucherinnen aus Bern und Google-Ads-Traffic sofort, was sie bei uns buchen können.
       </p>
-      <p id="price-intro-en" class="hidden">
-        Clear pricing and 10% off all treatments until June 30, 2026.
+      <p id="services-intro-en" class="section-intro hidden">
+        We place the most relevant nail services first so local visitors and Google Ads traffic can choose quickly.
       </p>
-      <p id="price-intro-vi" class="hidden">
-        Giá rõ ràng và giảm 10% cho tất cả dịch vụ đến hết ngày 30/06/2026.
-      </p>
-
-      <table id="price-table-de">
-        <tr>
-          <th>Dienstleistung</th>
-          <th>Preis (CHF)</th>
-        </tr>
-        <tr>
-          <td>Maniküre Classic</td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <td>Gel-Nägel Neuauflage</td>
-          <td>75</td>
-        </tr>
-        <tr>
-          <td>Auffüllen</td>
-          <td>65</td>
-        </tr>
-        <tr>
-          <td>Pediküre Classic</td>
-          <td>55</td>
-        </tr>
-        <tr>
-          <td>Nail Art Design</td>
-          <td>auf Anfrage</td>
-        </tr>
-      </table>
-
-      <table id="price-table-en" class="hidden">
-        <tr>
-          <th>Service</th>
-          <th>Price (CHF)</th>
-        </tr>
-        <tr>
-          <td>Classic Manicure</td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <td>Gel Nails New Set</td>
-          <td>75</td>
-        </tr>
-        <tr>
-          <td>Refill</td>
-          <td>65</td>
-        </tr>
-        <tr>
-          <td>Classic Pedicure</td>
-          <td>55</td>
-        </tr>
-        <tr>
-          <td>Nail Art Design</td>
-          <td>on request</td>
-        </tr>
-      </table>
-
-      <table id="price-table-vi" class="hidden">
-        <tr>
-          <th>Dịch vụ</th>
-          <th>Giá (CHF)</th>
-        </tr>
-        <tr>
-          <td>Manicure Classic</td>
-          <td>45</td>
-        </tr>
-        <tr>
-          <td>Bộ Gel Mới</td>
-          <td>75</td>
-        </tr>
-        <tr>
-          <td>Dặm Gel</td>
-          <td>65</td>
-        </tr>
-        <tr>
-          <td>Pedicure Classic</td>
-          <td>55</td>
-        </tr>
-        <tr>
-          <td>Nail Art Design</td>
-          <td>liên hệ</td>
-        </tr>
-      </table>
-
-      <div class="discount-link" id="discount-de">
-        <strong>10% Rabatt auf alle Behandlungen bis zum 30. Juni 2026</strong><br>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('de_price')">Jetzt Termin buchen</a>
-      </div>
-      <div class="discount-link hidden" id="discount-en">
-        <strong>10% off all treatments until June 30, 2026</strong><br>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('en_price')">Book now</a>
-      </div>
-      <div class="discount-link hidden" id="discount-vi">
-        <strong>Giảm 10% cho tất cả dịch vụ đến hết ngày 30/06/2026</strong><br>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('vi_price')">Đặt lịch ngay</a>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2 id="services-title-de">Beliebte Behandlungen</h2>
-      <h2 id="services-title-en" class="hidden">Popular Treatments</h2>
-      <h2 id="services-title-vi" class="hidden">Dịch Vụ Được Yêu Thích</h2>
-
-      <p id="services-intro-de">
-        Entdecke unsere beliebtesten Nail-Behandlungen für gepflegte, stilvolle und langanhaltend schöne Nägel.
-      </p>
-      <p id="services-intro-en" class="hidden">
-        Discover our most popular nail treatments for clean, stylish and long-lasting results.
-      </p>
-      <p id="services-intro-vi" class="hidden">
-        Khám phá các dịch vụ nail được yêu thích nhất với kết quả đẹp, chỉn chu và bền lâu.
+      <p id="services-intro-vi" class="section-intro hidden">
+        Những dịch vụ nail quan trọng nhất được đưa lên đầu để khách từ Google Ads hoặc tìm kiếm địa phương xem và chọn nhanh.
       </p>
 
       <div class="services-grid">
         <div class="service-card">
-          <h3 id="service1-title-de">Gel-Nägel Neuauflage</h3>
-          <h3 id="service1-title-en" class="hidden">Gel Nails New Set</h3>
-          <h3 id="service1-title-vi" class="hidden">Bộ Gel Mới</h3>
+          <h3 id="service1-title-de">Acryl-Babyboomer Neues Set</h3>
+          <h3 id="service1-title-en" class="hidden">Acrylic Babyboomer New Set</h3>
+          <h3 id="service1-title-vi" class="hidden">Bộ mới Acrylic Babyboomer</h3>
 
-          <p id="service1-text-de">Perfekt modellierte Nägel mit gepflegtem, langanhaltendem Finish.</p>
-          <p id="service1-text-en" class="hidden">Perfectly shaped nails with a polished, long-lasting finish.</p>
-          <p id="service1-text-vi" class="hidden">Móng được tạo form đẹp, hoàn thiện chỉn chu và giữ lâu.</p>
+          <p id="service1-text-de">Perfekt für ein gepflegtes, elegantes Finish mit sauberem Babyboomer-Look.</p>
+          <p id="service1-text-en" class="hidden">A polished full set with a clean, elegant babyboomer finish.</p>
+          <p id="service1-text-vi" class="hidden">Bộ mới chỉn chu với hiệu ứng babyboomer thanh lịch và sạch đẹp.</p>
+          <span class="meta">1 Std. · CHF 86</span>
           <a class="btn-book" id="service1-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('service_1_de')">Jetzt buchen</a>
           <a class="btn-book hidden" id="service1-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
@@ -875,13 +885,14 @@
         </div>
 
         <div class="service-card">
-          <h3 id="service2-title-de">Auffüllen</h3>
-          <h3 id="service2-title-en" class="hidden">Refill</h3>
-          <h3 id="service2-title-vi" class="hidden">Dặm Gel</h3>
+          <h3 id="service2-title-de">Auffüllen mit Acryl</h3>
+          <h3 id="service2-title-en" class="hidden">Acrylic Refill</h3>
+          <h3 id="service2-title-vi" class="hidden">Dặm Acrylic</h3>
 
-          <p id="service2-text-de">Für frische, saubere Nägel mit stabilem Look und schönem Übergang.</p>
-          <p id="service2-text-en" class="hidden">For fresh, clean nails with a balanced shape and seamless finish.</p>
-          <p id="service2-text-vi" class="hidden">Giúp móng mới lại, sạch đẹp và đều form tự nhiên.</p>
+          <p id="service2-text-de">Ideal zum sauberen Auffrischen deines bestehenden Sets nach einigen Wochen.</p>
+          <p id="service2-text-en" class="hidden">Ideal for refreshing your current acrylic set neatly after a few weeks.</p>
+          <p id="service2-text-vi" class="hidden">Phù hợp để dặm lại bộ acrylic đang có, gọn đẹp và đều form.</p>
+          <span class="meta">45 Min. · CHF 80</span>
           <a class="btn-book" id="service2-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('service_2_de')">Jetzt buchen</a>
           <a class="btn-book hidden" id="service2-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
@@ -891,13 +902,14 @@
         </div>
 
         <div class="service-card">
-          <h3 id="service3-title-de">Maniküre Classic</h3>
-          <h3 id="service3-title-en" class="hidden">Classic Manicure</h3>
-          <h3 id="service3-title-vi" class="hidden">Manicure Classic</h3>
+          <h3 id="service3-title-de">Pedicure</h3>
+          <h3 id="service3-title-en" class="hidden">Pedicure</h3>
+          <h3 id="service3-title-vi" class="hidden">Pedicure</h3>
 
-          <p id="service3-text-de">Gepflegte Hände, saubere Nagelform und ein natürlich schöner Eindruck.</p>
-          <p id="service3-text-en" class="hidden">Well-groomed hands, clean nail shaping and a naturally polished look.</p>
-          <p id="service3-text-vi" class="hidden">Bàn tay gọn gàng, móng được làm sạch và tạo dáng đẹp tự nhiên.</p>
+          <p id="service3-text-de">Von der schnellen Pflege bis zur ausführlichen Pedicure für schöne, gepflegte Füße.</p>
+          <p id="service3-text-en" class="hidden">From a quick refresh to a full pedicure treatment for clean, polished feet.</p>
+          <p id="service3-text-vi" class="hidden">Từ chăm sóc nhanh đến pedicure đầy đủ cho bàn chân sạch đẹp và chỉn chu.</p>
+          <span class="meta">15 Min. - 1 Std. 20 Min. · CHF 20 - 120</span>
           <a class="btn-book" id="service3-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('service_3_de')">Jetzt buchen</a>
           <a class="btn-book hidden" id="service3-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
@@ -907,13 +919,14 @@
         </div>
 
         <div class="service-card">
-          <h3 id="service4-title-de">Nail Art Design</h3>
-          <h3 id="service4-title-en" class="hidden">Nail Art Design</h3>
-          <h3 id="service4-title-vi" class="hidden">Thiết Kế Nail Art</h3>
+          <h3 id="service4-title-de">Nail Design</h3>
+          <h3 id="service4-title-en" class="hidden">Nail Design</h3>
+          <h3 id="service4-title-vi" class="hidden">Thiết kế móng</h3>
 
-          <p id="service4-text-de">Individuelle Designs mit Liebe zum Detail, passend zu deinem Stil.</p>
-          <p id="service4-text-en" class="hidden">Custom designs with attention to detail, tailored to your personal style.</p>
-          <p id="service4-text-vi" class="hidden">Mẫu thiết kế riêng, chăm chút từng chi tiết và phù hợp phong cách của bạn.</p>
+          <p id="service4-text-de">Minimalistisch oder auffällig: Designs passend zu deinem Stil und deinem Termin.</p>
+          <p id="service4-text-en" class="hidden">Minimal or bold nail art designs tailored to your style and appointment.</p>
+          <p id="service4-text-vi" class="hidden">Từ tối giản đến nổi bật, mẫu thiết kế được làm theo phong cách bạn muốn.</p>
+          <span class="meta">5 - 30 Min. · CHF 1 - 30</span>
           <a class="btn-book" id="service4-cta-de" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
             rel="noopener" onclick="trackBookingClick('service_4_de')">Jetzt buchen</a>
           <a class="btn-book hidden" id="service4-cta-en" href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
@@ -924,77 +937,99 @@
       </div>
     </div>
 
-    <div class="section final-cta">
-      <h2 id="gallery-title-de">Unsere Arbeiten</h2>
-      <h2 id="gallery-title-en" class="hidden">Our Work</h2>
-      <h2 id="gallery-title-vi" class="hidden">Các Mẫu Nail Của Tiệm</h2>
+    <div class="section">
+      <h2 id="price-title-de">Preise auf einen Blick</h2>
+      <h2 id="price-title-en" class="hidden">Prices at a Glance</h2>
+      <h2 id="price-title-vi" class="hidden">Giá Nổi Bật</h2>
 
-      <p id="gallery-intro-de" style="text-align:center; margin-bottom:20px;">
-        Entdecke echte Ergebnisse aus unserem Studio in Bern. Sauber gearbeitet, stilvoll umgesetzt und auf deinen Look abgestimmt.
+      <p id="price-intro-de" class="section-intro">
+        Ein kompakter Auszug aus unserem aktuellen Treatwell-Menü. Für die komplette Auswahl kannst du direkt online buchen.
       </p>
-      <p id="gallery-intro-en" class="hidden" style="text-align:center; margin-bottom:20px;">
-        Explore real results from our studio in Bern. Clean work, stylish finishes and looks tailored to you.
+      <p id="price-intro-en" class="section-intro hidden">
+        A compact selection from our current Treatwell menu. For the full list, book directly online.
       </p>
-      <p id="gallery-intro-vi" class="hidden" style="text-align:center; margin-bottom:20px;">
-        Khám phá những mẫu thật từ tiệm tại Bern. Làm kỹ, đẹp và phù hợp với phong cách của bạn.
+      <p id="price-intro-vi" class="section-intro hidden">
+        Đây là phần giá được rút gọn từ menu hiện tại trên Treatwell. Muốn xem đầy đủ, bạn có thể vào đặt lịch online trực tiếp.
       </p>
 
-      <div class="gallery">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4289_e3a4r2.jpg" alt="French Nails">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4288_brwwku.jpg" alt="Glossy Nude Nails">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4357_u9xsvw.jpg" alt="Pedicure">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277655/IMG_4292_yijvhj.jpg" alt="Elegant Pink Nails">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4358_gwrio1.jpg" alt="Modern Design Nails">
-        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277656/IMG_4387_lzh0kn.jpg" alt="Classic Finish Nails">
+      <div id="price-table-de" class="price-panel">
+        <div class="price-row"><strong>Acryl</strong><p>Neues Set mit Acryl Natur</p><span>45 Min.</span><em>CHF 75</em></div>
+        <div class="price-row"><strong>Acryl</strong><p>Auffüllen mit Acryl Natur</p><span>40 Min.</span><em>CHF 70</em></div>
+        <div class="price-row"><strong>Manicure</strong><p>Manicure</p><span>10 - 45 Min.</span><em>CHF 20 - 60</em></div>
+        <div class="price-row"><strong>Pedicure</strong><p>Pedicure</p><span>15 - 80 Min.</span><em>CHF 20 - 120</em></div>
+        <div class="price-row"><strong>Lashes</strong><p>Classic 1:1</p><span>1 Std.</span><em>CHF 60 - 80</em></div>
+      </div>
+      <div id="price-table-en" class="price-panel hidden">
+        <div class="price-row"><strong>Acrylic</strong><p>New Set with Natural Acrylic</p><span>45 min</span><em>CHF 75</em></div>
+        <div class="price-row"><strong>Acrylic</strong><p>Refill with Natural Acrylic</p><span>40 min</span><em>CHF 70</em></div>
+        <div class="price-row"><strong>Manicure</strong><p>Manicure</p><span>10 - 45 min</span><em>CHF 20 - 60</em></div>
+        <div class="price-row"><strong>Pedicure</strong><p>Pedicure</p><span>15 - 80 min</span><em>CHF 20 - 120</em></div>
+        <div class="price-row"><strong>Lashes</strong><p>Classic 1:1</p><span>1 hr</span><em>CHF 60 - 80</em></div>
+      </div>
+      <div id="price-table-vi" class="price-panel hidden">
+        <div class="price-row"><strong>Acrylic</strong><p>Bộ mới Acrylic tự nhiên</p><span>45 phút</span><em>CHF 75</em></div>
+        <div class="price-row"><strong>Acrylic</strong><p>Dặm Acrylic tự nhiên</p><span>40 phút</span><em>CHF 70</em></div>
+        <div class="price-row"><strong>Manicure</strong><p>Manicure</p><span>10 - 45 phút</span><em>CHF 20 - 60</em></div>
+        <div class="price-row"><strong>Pedicure</strong><p>Pedicure</p><span>15 - 80 phút</span><em>CHF 20 - 120</em></div>
+        <div class="price-row"><strong>Nối mi</strong><p>Classic 1:1</p><span>1 giờ</span><em>CHF 60 - 80</em></div>
       </div>
 
-      <p id="gallery-link-de" style="text-align:center; margin-top:15px;"><em>Mehr Inspiration auf <a href="https://instagram.com/queennailsbern"
-            target="_blank">Instagram</a></em></p>
-      <p id="gallery-link-en" class="hidden" style="text-align:center; margin-top:15px;"><em>More inspiration on <a href="https://instagram.com/queennailsbern"
-            target="_blank">Instagram</a></em></p>
-      <p id="gallery-link-vi" class="hidden" style="text-align:center; margin-top:15px;"><em>Xem thêm mẫu trên <a href="https://instagram.com/queennailsbern"
-            target="_blank">Instagram</a></em></p>
+      <div class="discount-link" id="discount-de">
+        <strong>10% Rabatt nur bei der ersten Online-Buchung über Treatwell</strong><br>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('de_price')">Komplettes Menü auf Treatwell ansehen</a>
+      </div>
+      <div class="discount-link hidden" id="discount-en">
+        <strong>10% off only on your first online booking via Treatwell</strong><br>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('en_price')">View full menu on Treatwell</a>
+      </div>
+      <div class="discount-link hidden" id="discount-vi">
+        <strong>Giảm 10% chỉ áp dụng cho lần đặt online đầu tiên qua Treatwell</strong><br>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('vi_price')">Xem menu đầy đủ trên Treatwell</a>
+      </div>
     </div>
 
     <div class="section">
-      <h2 id="why-title-de">Warum Kundinnen Queen Nails wählen</h2>
-      <h2 id="why-title-en" class="hidden">Why Clients Choose Queen Nails</h2>
-      <h2 id="why-title-vi" class="hidden">Vì Sao Khách Hàng Chọn Queen Nails</h2>
+      <h2 id="why-title-de">Warum Kundinnen Queen Nails in Bern wählen</h2>
+      <h2 id="why-title-en" class="hidden">Why Clients Choose Queen Nails in Bern</h2>
+      <h2 id="why-title-vi" class="hidden">Vì Sao Khách Chọn Queen Nails Tại Bern</h2>
 
-      <p id="why-intro-de" style="text-align:center; margin-bottom:20px;">
-        Bei uns geht es nicht nur um schöne Nägel, sondern um ein gepflegtes Ergebnis, das zu dir passt und lange Freude macht.
+      <p id="why-intro-de" class="section-intro">
+        Weniger Suchen, schneller entscheiden: Lage, Service und Buchung sind sofort sichtbar.
       </p>
-      <p id="why-intro-en" class="hidden" style="text-align:center; margin-bottom:20px;">
-        It is not just about beautiful nails, but about clean, polished results that suit you and last beautifully.
+      <p id="why-intro-en" class="section-intro hidden">
+        Less searching, faster decisions: location, booking, and service quality are visible right away.
       </p>
-      <p id="why-intro-vi" class="hidden" style="text-align:center; margin-bottom:20px;">
-        Không chỉ là làm móng đẹp, mà là mang đến kết quả chỉn chu, hợp với bạn và giữ đẹp lâu hơn.
+      <p id="why-intro-vi" class="section-intro hidden">
+        Giảm bớt chữ, giữ lại điều khách cần nhất: vị trí, dịch vụ, đánh giá và cách đặt lịch.
       </p>
 
-      <ul id="why-list-de">
-        <li>Zentrale Lage in der Berner Altstadt</li>
-        <li>Präzise und saubere Arbeit</li>
-        <li>Mehrsprachiger Service</li>
-        <li>Online-Terminbuchung in wenigen Klicks</li>
+      <ul id="why-list-de" class="kicker-grid">
+        <li class="kicker-card"><strong>Standort</strong>Kramgasse 37, 3011 Bern</li>
+        <li class="kicker-card"><strong>Buchung</strong>Online via Treatwell in wenigen Klicks</li>
+        <li class="kicker-card"><strong>Service</strong>Deutsch, Englisch und Vietnamesisch</li>
+        <li class="kicker-card"><strong>Fokus</strong>Saubere Arbeit bei Nails und Lashes</li>
       </ul>
-      <ul id="why-list-en" class="hidden">
-        <li>Central location in Bern Old Town</li>
-        <li>Precise and clean work</li>
-        <li>Multilingual service</li>
-        <li>Easy online booking in just a few clicks</li>
+      <ul id="why-list-en" class="kicker-grid hidden">
+        <li class="kicker-card"><strong>Location</strong>Kramgasse 37, 3011 Bern</li>
+        <li class="kicker-card"><strong>Booking</strong>Easy online booking via Treatwell</li>
+        <li class="kicker-card"><strong>Service</strong>German, English, and Vietnamese</li>
+        <li class="kicker-card"><strong>Focus</strong>Clean nail and lash work</li>
       </ul>
-      <ul id="why-list-vi" class="hidden">
-        <li>Vị trí trung tâm tại phố cổ Bern</li>
-        <li>Làm kỹ, sạch và chỉn chu</li>
-        <li>Hỗ trợ nhiều ngôn ngữ</li>
-        <li>Đặt lịch online nhanh chóng</li>
+      <ul id="why-list-vi" class="kicker-grid hidden">
+        <li class="kicker-card"><strong>Vị trí</strong>Kramgasse 37, 3011 Bern</li>
+        <li class="kicker-card"><strong>Đặt lịch</strong>Online qua Treatwell chỉ vài bước</li>
+        <li class="kicker-card"><strong>Ngôn ngữ</strong>Deutsch, English, Tiếng Việt</li>
+        <li class="kicker-card"><strong>Thế mạnh</strong>Làm kỹ ở cả nails và lashes</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2 id="reviews-title-de">Das sagen unsere Kundinnen</h2>
-      <h2 id="reviews-title-en" class="hidden">What Our Clients Say</h2>
-      <h2 id="reviews-title-vi" class="hidden">Khách Hàng Nói Gì Về Queen Nails</h2>
+      <h2 id="reviews-title-de">Bewertungen aus Bern und Treatwell</h2>
+      <h2 id="reviews-title-en" class="hidden">What Clients Say</h2>
+      <h2 id="reviews-title-vi" class="hidden">Khách Hàng Nói Gì</h2>
 
       <div class="reviews-grid">
         <div class="review-card">
@@ -1018,63 +1053,13 @@
     </div>
 
     <div class="section">
-      <h2 id="faq-title-de">Häufige Fragen</h2>
-      <h2 id="faq-title-en" class="hidden">Frequently Asked Questions</h2>
-      <h2 id="faq-title-vi" class="hidden">Câu Hỏi Thường Gặp</h2>
+      <h2 id="contact-title-de">Nagelstudio in der Berner Altstadt</h2>
+      <h2 id="contact-title-en" class="hidden">Find Us in Bern Old Town</h2>
+      <h2 id="contact-title-vi" class="hidden">Tiệm Ở Khu Phố Cổ Bern</h2>
 
-      <div id="faq-de">
-        <p><strong>Wie buche ich meinen Termin?</strong><br>Du kannst deinen Termin ganz einfach online über Treatwell buchen. Klicke einfach auf „Jetzt 10% sichern“ und wähle deine gewünschte Behandlung.</p>
-        <p><strong>Gilt der 10%-Rabatt für alle Behandlungen?</strong><br>Ja. Der 10%-Rabatt gilt für alle Behandlungen und ist bis zum 30. Juni 2026 verfügbar.</p>
-        <p><strong>Wo befindet sich das Studio?</strong><br>Du findest Queen Nails &amp; Lashes an der Kramgasse 37, 3011 Bern, zentral in der Berner Altstadt.</p>
-        <p><strong>Welche Sprachen werden gesprochen?</strong><br>Wir beraten dich gerne auf Deutsch, Englisch oder Vietnamesisch.</p>
-      </div>
-
-      <div id="faq-en" class="hidden">
-        <p><strong>How do I book my appointment?</strong><br>You can easily book online via Treatwell. Just click “Claim 10% now” and choose your preferred treatment.</p>
-        <p><strong>Does the 10% discount apply to all treatments?</strong><br>Yes. The 10% discount applies to all treatments until June 30, 2026.</p>
-        <p><strong>Where is the studio located?</strong><br>You can find Queen Nails &amp; Lashes at Kramgasse 37, 3011 Bern, in the heart of Bern Old Town.</p>
-        <p><strong>Which languages do you speak?</strong><br>We are happy to assist you in German, English or Vietnamese.</p>
-      </div>
-
-      <div id="faq-vi" class="hidden">
-        <p><strong>Làm sao để đặt lịch?</strong><br>Bạn có thể đặt lịch online rất dễ qua Treatwell. Chỉ cần bấm “Nhận ưu đãi 10%” và chọn dịch vụ mong muốn.</p>
-        <p><strong>Ưu đãi 10% áp dụng cho tất cả dịch vụ chứ?</strong><br>Có. Ưu đãi 10% áp dụng cho tất cả dịch vụ đến hết ngày 30/06/2026.</p>
-        <p><strong>Tiệm ở đâu?</strong><br>Queen Nails &amp; Lashes nằm tại Kramgasse 37, 3011 Bern, ngay trung tâm khu phố cổ Bern.</p>
-        <p><strong>Tiệm hỗ trợ ngôn ngữ nào?</strong><br>Chúng tôi hỗ trợ bằng tiếng Đức, tiếng Anh và tiếng Việt.</p>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2 id="final-cta-title-de">Sichere dir jetzt 10% auf alle Behandlungen</h2>
-      <h2 id="final-cta-title-en" class="hidden">Get 10% off all treatments now</h2>
-      <h2 id="final-cta-title-vi" class="hidden">Nhận ngay ưu đãi 10% cho tất cả dịch vụ</h2>
-
-      <p id="final-cta-text-de" style="text-align:center; margin-bottom:20px;">
-        Angebot gültig bis zum 30. Juni 2026. Buche jetzt deinen Termin online oder ruf uns direkt an.
-      </p>
-      <p id="final-cta-text-en" class="hidden" style="text-align:center; margin-bottom:20px;">
-        Offer valid until June 30, 2026. Book your appointment online now or call us directly.
-      </p>
-      <p id="final-cta-text-vi" class="hidden" style="text-align:center; margin-bottom:20px;">
-        Ưu đãi áp dụng đến hết ngày 30/06/2026. Đặt lịch online ngay hoặc gọi trực tiếp cho tiệm.
-      </p>
-
-      <div class="cta-bar">
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('final_cta_booking')" class="btn-book" id="final-book-de">Jetzt Termin buchen</a>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('final_cta_booking')" class="btn-book hidden" id="final-book-en">Book now</a>
-        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
-          onclick="trackBookingClick('final_cta_booking')" class="btn-book hidden" id="final-book-vi">Đặt lịch ngay</a>
-
-        <a href="tel:+41798050068" class="btn-call" id="final-call-de">Jetzt anrufen</a>
-        <a href="tel:+41798050068" class="btn-call hidden" id="final-call-en">Call now</a>
-        <a href="tel:+41798050068" class="btn-call hidden" id="final-call-vi">Gọi ngay</a>
-      </div>
-
-      <h3 id="contact-title-de">So findest du uns</h3>
-      <h3 id="contact-title-en" class="hidden">Find Us</h3>
-      <h3 id="contact-title-vi" class="hidden">Thông Tin Liên Hệ</h3>
+      <p class="section-intro" id="contact-address-de">Kramgasse 37, 3011 Bern · zentral gelegen für Kundinnen aus Bern und Umgebung.</p>
+      <p class="section-intro hidden" id="contact-address-en">Kramgasse 37, 3011 Bern · centrally located for clients in Bern and nearby areas.</p>
+      <p class="section-intro hidden" id="contact-address-vi">Kramgasse 37, 3011 Bern · vị trí trung tâm, thuận tiện cho khách ở Bern và khu vực gần đó.</p>
 
       <div class="map-container">
         <iframe
@@ -1083,10 +1068,6 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
       <div class="contact-info">
-        <p id="contact-address-de"><strong>Adresse:</strong> Kramgasse 37, 3011 Bern</p>
-        <p id="contact-address-en" class="hidden"><strong>Address:</strong> Kramgasse 37, 3011 Bern</p>
-        <p id="contact-address-vi" class="hidden"><strong>Địa chỉ:</strong> Kramgasse 37, 3011 Bern</p>
-
         <p id="contact-phone-de"><strong>Telefon:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
         <p id="contact-phone-en" class="hidden"><strong>Phone:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
         <p id="contact-phone-vi" class="hidden"><strong>Điện thoại:</strong> <a href="tel:+41798050068" class="btn-call">+41 79 805 00 68</a></p>
@@ -1119,11 +1100,145 @@
         </p>
       </div>
     </div>
+
+    <div class="section">
+      <h2 id="lashes-title-de">Wimpernverlängerung in Bern</h2>
+      <h2 id="lashes-title-en" class="hidden">Lash Extensions in Bern</h2>
+      <h2 id="lashes-title-vi" class="hidden">Nối Mi Tại Bern</h2>
+
+      <p id="lashes-intro-de" class="section-intro">
+        Neben Nails bieten wir auch Wimpernverlängerungen in Bern an, von natürlich bis voluminös.
+      </p>
+      <p id="lashes-intro-en" class="section-intro hidden">
+        We also offer lash extensions in Bern, from natural definition to fuller volume looks.
+      </p>
+      <p id="lashes-intro-vi" class="section-intro hidden">
+        Ngoài nails, tiệm còn có nối mi tại Bern với nhiều kiểu từ tự nhiên đến dày nổi bật.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 id="lash1-title-de">Classic 1:1 Technik</h3>
+          <h3 id="lash1-title-en" class="hidden">Classic 1:1 Technique</h3>
+          <h3 id="lash1-title-vi" class="hidden">Classic 1:1</h3>
+          <p id="lash1-text-de">Für einen natürlichen, definierten Blick mit schöner Länge.</p>
+          <p id="lash1-text-en" class="hidden">A natural-looking lash extension option with clean definition.</p>
+          <p id="lash1-text-vi" class="hidden">Kiểu nối mi tự nhiên, gọn mắt và dễ hợp nhiều khách.</p>
+          <span class="meta">1 Std. · CHF 60 - 80</span>
+        </div>
+        <div class="service-card">
+          <h3 id="lash2-title-de">Russian Lashes Volumen</h3>
+          <h3 id="lash2-title-en" class="hidden">Russian Volume Lashes</h3>
+          <h3 id="lash2-title-vi" class="hidden">Russian Volume</h3>
+          <p id="lash2-text-de">Mehr Dichte und ein weicher, voller Look für den Alltag oder besondere Anlässe.</p>
+          <p id="lash2-text-en" class="hidden">More density and a softer, fuller look for everyday wear or special occasions.</p>
+          <p id="lash2-text-vi" class="hidden">Dày hơn, mềm hơn và tạo hiệu ứng đầy đặn hơn cho mắt.</p>
+          <span class="meta">1 Std. 30 Min. · CHF 80 - 140</span>
+        </div>
+        <div class="service-card">
+          <h3 id="lash3-title-de">Mega Volumen</h3>
+          <h3 id="lash3-title-en" class="hidden">Mega Volume</h3>
+          <h3 id="lash3-title-vi" class="hidden">Mega Volume</h3>
+          <p id="lash3-text-de">Für Kundinnen, die einen intensiveren und auffälligeren Wimpern-Look möchten.</p>
+          <p id="lash3-text-en" class="hidden">For clients who want a stronger, more dramatic lash effect.</p>
+          <p id="lash3-text-vi" class="hidden">Dành cho khách thích hiệu ứng mi dày, nổi bật và ấn tượng hơn.</p>
+          <span class="meta">1 Std. 30 Min. · CHF 120 - 180</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 id="gallery-title-de">Unsere Arbeiten</h2>
+      <h2 id="gallery-title-en" class="hidden">Our Work</h2>
+      <h2 id="gallery-title-vi" class="hidden">Các Mẫu Của Tiệm</h2>
+
+      <p id="gallery-intro-de" class="section-intro">
+        Echte Ergebnisse aus unserem Studio in Bern: gepflegt, sauber und stilvoll umgesetzt.
+      </p>
+      <p id="gallery-intro-en" class="section-intro hidden">
+        Real work from our studio in Bern, with clean finishes and styles tailored to clients.
+      </p>
+      <p id="gallery-intro-vi" class="section-intro hidden">
+        Những mẫu thật từ tiệm ở Bern, làm kỹ và hoàn thiện gọn đẹp theo phong cách khách chọn.
+      </p>
+
+      <div class="gallery">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4289_e3a4r2.jpg" alt="French Nails Bern">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277658/IMG_4288_brwwku.jpg" alt="Glossy Nude Nails Bern">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4357_u9xsvw.jpg" alt="Pedicure Bern">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277655/IMG_4292_yijvhj.jpg" alt="Elegant Pink Nails Bern">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277657/IMG_4358_gwrio1.jpg" alt="Modern Design Nails Bern">
+        <img src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1754277656/IMG_4387_lzh0kn.jpg" alt="Classic Finish Nails Bern">
+      </div>
+
+      <p id="gallery-link-de" style="text-align:center; margin-top:15px;"><em>Mehr Inspiration auf <a href="https://instagram.com/queennailsbern"
+            target="_blank">Instagram</a></em></p>
+      <p id="gallery-link-en" class="hidden" style="text-align:center; margin-top:15px;"><em>More inspiration on <a href="https://instagram.com/queennailsbern"
+            target="_blank">Instagram</a></em></p>
+      <p id="gallery-link-vi" class="hidden" style="text-align:center; margin-top:15px;"><em>Xem thêm mẫu trên <a href="https://instagram.com/queennailsbern"
+            target="_blank">Instagram</a></em></p>
+    </div>
+
+    <div class="section">
+      <h2 id="faq-title-de">Häufige Fragen</h2>
+      <h2 id="faq-title-en" class="hidden">Frequently Asked Questions</h2>
+      <h2 id="faq-title-vi" class="hidden">Câu Hỏi Thường Gặp</h2>
+
+      <div id="faq-de">
+        <p><strong>Wie buche ich meinen Termin?</strong><br>Online über Treatwell. Wähle einfach deine Behandlung und deinen Wunschtermin.</p>
+        <p><strong>Für wen gilt der 10%-Rabatt?</strong><br>Nur für Kundinnen, die zum ersten Mal online über Treatwell bei uns buchen.</p>
+        <p><strong>Wo befindet sich das Studio?</strong><br>Du findest Queen Nails &amp; Lashes an der Kramgasse 37, 3011 Bern, zentral in der Berner Altstadt.</p>
+        <p><strong>Welche Sprachen werden gesprochen?</strong><br>Wir beraten dich gerne auf Deutsch, Englisch oder Vietnamesisch.</p>
+      </div>
+
+      <div id="faq-en" class="hidden">
+        <p><strong>How do I book my appointment?</strong><br>Book online via Treatwell and choose your preferred service and time slot.</p>
+        <p><strong>Who can use the 10% discount?</strong><br>Only clients making their first online booking with us via Treatwell.</p>
+        <p><strong>Where is the studio located?</strong><br>You can find Queen Nails &amp; Lashes at Kramgasse 37, 3011 Bern, in the heart of Bern Old Town.</p>
+        <p><strong>Which languages do you speak?</strong><br>We are happy to assist you in German, English or Vietnamese.</p>
+      </div>
+
+      <div id="faq-vi" class="hidden">
+        <p><strong>Làm sao để đặt lịch?</strong><br>Bạn đặt online qua Treatwell, chọn dịch vụ và khung giờ phù hợp.</p>
+        <p><strong>Ưu đãi 10% áp dụng cho ai?</strong><br>Chỉ áp dụng cho khách đặt lịch online lần đầu qua Treatwell.</p>
+        <p><strong>Tiệm ở đâu?</strong><br>Queen Nails &amp; Lashes nằm tại Kramgasse 37, 3011 Bern, ngay trung tâm khu phố cổ Bern.</p>
+        <p><strong>Tiệm hỗ trợ ngôn ngữ nào?</strong><br>Chúng tôi hỗ trợ bằng tiếng Đức, tiếng Anh và tiếng Việt.</p>
+      </div>
+    </div>
+
+    <div class="section final-cta">
+      <h2 id="final-cta-title-de">Nagelstudio Bern mit Nails, Lashes und schneller Online-Buchung</h2>
+      <h2 id="final-cta-title-en" class="hidden">Nail salon in Bern with nails, lashes, and fast online booking</h2>
+      <h2 id="final-cta-title-vi" class="hidden">Tiệm nail tại Bern với nails, lashes và đặt lịch online nhanh</h2>
+
+      <p id="final-cta-text-de" class="seo-copy">
+        Queen Nails &amp; Lashes ist ein Nagelstudio in Bern für Manicure, Pedicure, Acryl, Gel, Nail Design und Wimpernverlängerung. Für lokale Suche in Bern, Besucherinnen aus der Schweiz und Google Ads zählt vor allem: klare Services, gute Lage und eine einfache Buchung über Treatwell.
+      </p>
+      <p id="final-cta-text-en" class="seo-copy hidden">
+        Queen Nails &amp; Lashes is a Bern nail salon for manicure, pedicure, acrylic, gel, nail design, and lash extensions. For local SEO and Google Ads traffic, the page now keeps services, location, and booking clear and easy to scan.
+      </p>
+      <p id="final-cta-text-vi" class="seo-copy hidden">
+        Queen Nails &amp; Lashes là tiệm nail tại Bern với manicure, pedicure, acrylic, gel, nail design và nối mi. Trang này được rút gọn để khách từ tìm kiếm địa phương và Google Ads nhìn rõ dịch vụ, vị trí và cách đặt lịch ngay.
+      </p>
+
+      <div class="cta-bar">
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('final_cta_booking')" class="btn-book" id="final-book-de">Termin online buchen</a>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('final_cta_booking')" class="btn-book hidden" id="final-book-en">Book online now</a>
+        <a href="https://buchung.treatwell.ch/ort/queen-nails-and-lashes/" target="_blank"
+          onclick="trackBookingClick('final_cta_booking')" class="btn-book hidden" id="final-book-vi">Đặt lịch online ngay</a>
+
+        <a href="tel:+41798050068" class="btn-call" id="final-call-de">Jetzt anrufen</a>
+        <a href="tel:+41798050068" class="btn-call hidden" id="final-call-en">Call now</a>
+        <a href="tel:+41798050068" class="btn-call hidden" id="final-call-vi">Gọi ngay</a>
+      </div>
+    </div>
   </div>
 
   <!-- TRACKING JS -->
   <script>
-    const OFFER_ID = '10_percent_all_treatments_until_2026_06_30';
+    const OFFER_ID = '10_percent_first_treatwell_booking_until_2026_06_30';
     const PAGE_NAME = 'queen_nails_google_ads_lp';
     const TRACKED_SCROLLS = new Set();
 
@@ -1212,6 +1327,14 @@
         ['review1'],
         ['review2'],
         ['review3'],
+        ['lashes-title'],
+        ['lashes-intro'],
+        ['lash1-title'],
+        ['lash1-text'],
+        ['lash2-title'],
+        ['lash2-text'],
+        ['lash3-title'],
+        ['lash3-text'],
         ['faq-title'],
         ['faq'],
         ['final-cta-title'],
