@@ -305,20 +305,57 @@
 
     .hero-media {
       position: relative;
+      display: flex;
+      justify-content: center;
     }
 
-    .promo-banner {
-      margin-bottom: 0;
+    .hero-menu-card {
+      width: min(100%, 440px);
+      background: linear-gradient(180deg, rgba(255, 249, 252, 0.98), rgba(255, 241, 247, 0.98));
+      border: 1px solid rgba(255, 20, 147, 0.14);
+      border-radius: 30px;
+      padding: 18px;
+      box-shadow: 0 22px 44px rgba(43, 17, 37, 0.14);
     }
 
-    .promo-banner img {
-      max-width: 100%;
-      border-radius: var(--radius);
-      box-shadow: 0 18px 40px rgba(43, 17, 37, 0.18);
+    .hero-menu-card img {
+      width: 100%;
       display: block;
-      margin: 0 auto;
-      min-height: 420px;
-      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 14px 28px rgba(43, 17, 37, 0.12);
+      background: #fff;
+    }
+
+    .hero-menu-caption {
+      margin-top: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .hero-menu-caption strong {
+      color: var(--primary-dark);
+      font-size: 0.98rem;
+    }
+
+    .hero-menu-caption span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .hero-menu-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #ff78bf, var(--primary-dark));
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.2px;
     }
 
     .booking-widget {
@@ -583,6 +620,59 @@
       background: #fff;
     }
 
+    .price-groups {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .price-group {
+      background: rgba(255, 255, 255, 0.78);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 12px 28px rgba(43, 17, 37, 0.08);
+      padding: 22px;
+    }
+
+    .price-group h3 {
+      margin: 0 0 14px;
+      color: var(--primary);
+      font-size: 1.08rem;
+    }
+
+    .price-item {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 10px 0;
+      border-top: 1px solid rgba(43, 17, 37, 0.08);
+      align-items: baseline;
+    }
+
+    .price-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+    }
+
+    .price-item strong {
+      color: var(--ink);
+      font-size: 0.96rem;
+    }
+
+    .price-item span {
+      color: var(--primary-dark);
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .price-item small {
+      display: block;
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.84rem;
+    }
+
     .price-row {
       display: grid;
       grid-template-columns: minmax(110px, 150px) minmax(0, 1fr) 110px 90px;
@@ -690,7 +780,8 @@
       }
 
       .hero-points,
-      .kicker-grid {
+      .kicker-grid,
+      .price-groups {
         grid-template-columns: 1fr;
       }
 
@@ -720,8 +811,14 @@
         text-align: right;
       }
 
-      .promo-banner img {
-        min-height: 300px;
+      .hero-menu-card {
+        width: 100%;
+        padding: 14px;
+      }
+
+      .hero-menu-caption {
+        align-items: flex-start;
+        flex-direction: column;
       }
 
       h1 {
@@ -793,10 +890,15 @@
         </div>
       </div>
       <div class="hero-media">
-        <div class="promo-banner">
-          <img
-            src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-            alt="Nagelstudio Bern mit Manicure, Pedicure und Acryl Gel">
+        <div class="hero-menu-card">
+          <img src="queen.png" alt="Preisliste Queen Nails und Lashes Bern mit Neukundenrabatt" loading="eager">
+          <div class="hero-menu-caption">
+            <div>
+              <strong>Preisliste & Aktionen</strong>
+              <span>Die wichtigsten Preise direkt sichtbar</span>
+            </div>
+            <div class="hero-menu-badge">10% für Neukundinnen</div>
+          </div>
         </div>
       </div>
     </div>
@@ -823,10 +925,15 @@
         </div>
       </div>
       <div class="hero-media">
-        <div class="promo-banner">
-          <img
-            src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-            alt="Bern nail salon for manicure pedicure acrylic gel">
+        <div class="hero-menu-card">
+          <img src="queen.png" alt="Queen Nails and Lashes Bern price list with new client discount" loading="lazy">
+          <div class="hero-menu-caption">
+            <div>
+              <strong>Price list & offer</strong>
+              <span>Key prices visible right away</span>
+            </div>
+            <div class="hero-menu-badge">10% for new clients</div>
+          </div>
         </div>
       </div>
     </div>
@@ -853,10 +960,15 @@
         </div>
       </div>
       <div class="hero-media">
-        <div class="promo-banner">
-          <img
-            src="https://res.cloudinary.com/dzrqabrpo/image/upload/v1762683960/558193442_122135384018912076_8751191963487188210_n_ti5qcn.jpg"
-            alt="Tiệm nail Bern với manicure pedicure acrylic gel">
+        <div class="hero-menu-card">
+          <img src="queen.png" alt="Bang gia Queen Nails and Lashes Bern kem uu dai khach moi" loading="lazy">
+          <div class="hero-menu-caption">
+            <div>
+              <strong>Bảng giá & ưu đãi</strong>
+              <span>Khách nhìn thấy giá nổi bật ngay</span>
+            </div>
+            <div class="hero-menu-badge">Giảm 10% khách mới</div>
+          </div>
         </div>
       </div>
     </div>
@@ -962,14 +1074,80 @@
         Đây là phần giá được rút gọn từ menu đặt lịch hiện tại. Muốn xem đầy đủ, bạn có thể tiếp tục qua website của tiệm.
       </p>
 
-      <div id="price-table-de" class="price-panel">
-        <img class="price-menu-image" src="queen.png" alt="Preisliste Queen Nails und Lashes Bern mit 10 Prozent Rabatt fuer Neukundinnen" loading="lazy">
+      <div id="price-table-de" class="price-groups">
+        <div class="price-group">
+          <h3>Maniküre</h3>
+          <div class="price-item"><div><strong>inkl. Massage</strong></div><span>30 CHF</span></div>
+          <div class="price-item"><div><strong>mit Lackieren</strong></div><span>45 CHF</span></div>
+          <div class="price-item"><div><strong>mit Shellac</strong></div><span>60 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Pediküre</h3>
+          <div class="price-item"><div><strong>inkl. Massage</strong></div><span>50 CHF</span></div>
+          <div class="price-item"><div><strong>mit Lackieren</strong></div><span>60 CHF</span></div>
+          <div class="price-item"><div><strong>mit Shellac</strong></div><span>80 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Nagelverstärkung</h3>
+          <div class="price-item"><div><strong>Natur</strong><small>Neuset / Auffüllen</small></div><span>70 / 65 CHF</span></div>
+          <div class="price-item"><div><strong>Farbe / French / Babyboomer</strong><small>Neuset / Auffüllen</small></div><span>85 / 80 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Wimpern</h3>
+          <div class="price-item"><div><strong>Classic</strong><small>Neuset</small></div><span>80 CHF</span></div>
+          <div class="price-item"><div><strong>Russian Lashes</strong><small>Volumen Technik</small></div><span>140 CHF</span></div>
+          <div class="price-item"><div><strong>Mega Volume</strong><small>Volumen Technik</small></div><span>180 CHF</span></div>
+        </div>
       </div>
-      <div id="price-table-en" class="price-panel hidden">
-        <img class="price-menu-image" src="queen.png" alt="Queen Nails and Lashes Bern price list with 10 percent off for new clients" loading="lazy">
+      <div id="price-table-en" class="price-groups hidden">
+        <div class="price-group">
+          <h3>Manicure</h3>
+          <div class="price-item"><div><strong>with massage</strong></div><span>30 CHF</span></div>
+          <div class="price-item"><div><strong>with polish</strong></div><span>45 CHF</span></div>
+          <div class="price-item"><div><strong>with shellac</strong></div><span>60 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Pedicure</h3>
+          <div class="price-item"><div><strong>with massage</strong></div><span>50 CHF</span></div>
+          <div class="price-item"><div><strong>with polish</strong></div><span>60 CHF</span></div>
+          <div class="price-item"><div><strong>with shellac</strong></div><span>80 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Nail strengthening</h3>
+          <div class="price-item"><div><strong>Natural</strong><small>New set / Refill</small></div><span>70 / 65 CHF</span></div>
+          <div class="price-item"><div><strong>Color / French / Babyboomer</strong><small>New set / Refill</small></div><span>85 / 80 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Lashes</h3>
+          <div class="price-item"><div><strong>Classic</strong><small>New set</small></div><span>80 CHF</span></div>
+          <div class="price-item"><div><strong>Russian Lashes</strong><small>Volume technique</small></div><span>140 CHF</span></div>
+          <div class="price-item"><div><strong>Mega Volume</strong><small>Volume technique</small></div><span>180 CHF</span></div>
+        </div>
       </div>
-      <div id="price-table-vi" class="price-panel hidden">
-        <img class="price-menu-image" src="queen.png" alt="Bang gia Queen Nails and Lashes Bern giam 10 phan tram cho khach moi" loading="lazy">
+      <div id="price-table-vi" class="price-groups hidden">
+        <div class="price-group">
+          <h3>Manicure</h3>
+          <div class="price-item"><div><strong>kèm massage</strong></div><span>30 CHF</span></div>
+          <div class="price-item"><div><strong>có sơn màu</strong></div><span>45 CHF</span></div>
+          <div class="price-item"><div><strong>có shellac</strong></div><span>60 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Pedicure</h3>
+          <div class="price-item"><div><strong>kèm massage</strong></div><span>50 CHF</span></div>
+          <div class="price-item"><div><strong>có sơn màu</strong></div><span>60 CHF</span></div>
+          <div class="price-item"><div><strong>có shellac</strong></div><span>80 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Đắp cứng móng</h3>
+          <div class="price-item"><div><strong>Tự nhiên</strong><small>Bộ mới / Dặm</small></div><span>70 / 65 CHF</span></div>
+          <div class="price-item"><div><strong>Màu / French / Babyboomer</strong><small>Bộ mới / Dặm</small></div><span>85 / 80 CHF</span></div>
+        </div>
+        <div class="price-group">
+          <h3>Nối mi</h3>
+          <div class="price-item"><div><strong>Classic</strong><small>Bộ mới</small></div><span>80 CHF</span></div>
+          <div class="price-item"><div><strong>Russian Lashes</strong><small>Kỹ thuật volume</small></div><span>140 CHF</span></div>
+          <div class="price-item"><div><strong>Mega Volume</strong><small>Kỹ thuật volume</small></div><span>180 CHF</span></div>
+        </div>
       </div>
 
       <div class="discount-link" id="discount-de">
